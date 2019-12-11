@@ -155,15 +155,75 @@ Ejemplo:
 
 
 ## Function LOGIN
-bla bla bla
+Autentica a un usuario en el sistema de usuarios utilizado.
+
+Estos son sus parámetros:
+
+| Tipo  | Descripción |
+| ------------- | ------------- |
+| provider | Proveedor de autenticación. Actualmente solo se acepta "firebase".|
+| email | Email del usuario.|
+| pass | Contraseña introducida por el usuario.|
+| onvalid | Contiene una función (o una secuencia de funciones) que se ejecutará si la validación del usuario es correcta.|
+| oninvalid | Contiene una función (o una secuencia de funciones) que se ejecutará si la validación del usuario es incorrecta.|
+
+Ejemplo:
+<pre>
+{
+	"function":"login",
+	"provider":"firebase",
+	"email":"@property.email",
+	"pass":"@property.pass",
+	"onvalid":{
+		"function":"goto",
+		"view":"main"
+	},
+	"oninvalid":{
+		"function":"popup",
+		"dialog":"login_error"
+	}
+}
+</pre>
 
 
 ## Function LOGOUT
-bla bla bla
+Cierra la sesión del usuario actual.
+
+Estos son sus parámetros:
+
+| Tipo  | Descripción |
+| ------------- | ------------- |
+| provider | Proveedor de autenticación. Actualmente solo se acepta "firebase".|
+
+Ejemplo:
+<pre>
+{
+	"function":"logout",
+	"provider":"firebase"
+}
+</pre>
 
 
 ## Function MULTIPLY
 Realiza una operación de multiplicación.
+
+Estos son sus parámetros:
+
+| Tipo  | Descripción |
+| ------------- | ------------- |
+| what | Referencia a la base de datos.|
+
+Ejemplo:
+<pre>
+{
+	"function":"open",
+	"what":"@database.restaurants"
+}
+</pre>
+
+
+## Function OPEN
+Abre una base de datos.
 
 Estos son sus parámetros:
 
@@ -182,12 +242,23 @@ Ejemplo:
 </pre>
 
 
-## Function OPEN
-bla bla bla
-
-
 ## Function PLAY
-bla bla bla
+Reproduce un archivo de audio.
+
+Estos son sus parámetros:
+
+| Tipo  | Descripción |
+| ------------- | ------------- |
+| what | Referencia al archivo de audio que queremos reproducir. Puede ser el nombre de un archivo contenido en la carpeta `res`.|
+| loop (opcional) | Si existe y es `true`, el audio se reproduce a modo de loop.
+
+Ejemplo:
+<pre>
+{
+	"function":"play",
+	"dialog":"song.mp3"
+}
+</pre>
 
 
 ## Function POPUP
