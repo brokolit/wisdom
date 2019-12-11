@@ -108,13 +108,27 @@ bla bla bla
 
 
 ## Function STOP
-bla bla bla
+Detiene la reproducción de un archivo de audio.
+
+Estos son sus parámetros:
+
+| Tipo  | Descripción |
+| ------------- | ------------- |
+| what | Referencia al audio cuya reproducción hay que detener. Si el valor es "all", se detienen todos los audios que se estén reproduciendo.|
+
+Ejemplo:
+<pre>
+	{
+		"function":"stop",
+		"what":"song.mp3"
+	}
+</pre>
 
 
 ## Function SET
 Establece un valor para una referencia.
 
-Debe incluir estos parámetros:
+Estos son sus parámetros:
 
 | Tipo  | Descripción |
 | ------------- | ------------- |
@@ -123,10 +137,10 @@ Debe incluir estos parámetros:
 
 Ejemplo:
 <pre>
-{
-	"function":"set",
-	"what":"@property.city",
-	"value":"Valencia"
-}
+	{
+		"function":"set",
+		"what":"@property.city",
+		"value":"Valencia"
+	}
 </pre>
 
