@@ -15,6 +15,7 @@ Para crear una app móvil nativa, nuestro proyecto debe contener la siguiente es
 ├── [res](res)  
 &emsp;&emsp;├── [assets (opcional)](res)  
 &emsp;&emsp;├── [res](res)  
+&emsp;&emsp;├── [assets (opcional)](res)  
 &emsp;├── [assets (opcional)](res) 
 &emsp;├── [fonts (opcional)](res)&nbsp;
 &emsp;└── [icon](res)  
