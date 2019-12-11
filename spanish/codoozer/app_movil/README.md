@@ -10,7 +10,7 @@ Para crear una app móvil nativa, nuestro proyecto debe contener la siguiente es
 
 ```
 
-app.json
+[app.json](app.json)
 ├── dialogs (opcional)    
 ├── external (opcional)
 ├── menus (opcional)
