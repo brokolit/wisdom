@@ -1,22 +1,20 @@
-# ¿Qué es Codoozer?
+# Multilenguaje (i18n)
 
-Codoozer es una herramienta online para crear diferentes tipos de aplicaciones de software sin necesidad de disponer de conocimientos de programación. Con Codoozer, se podrá crear:
+Codoozer está preparado para genera software multilenguaje.
 
-- Aplicaciones nativas Android
-- Aplicaciones nativas iOS (próximamente)
-- Páginas web (próximamente)
-- Backend Scripts (PHP)
-- Cloud Functions para Google Cloud Platform (próximamente)
-- Bots AIML (próximamente)
+En aquellos parámetros JSON cuyo valor es un texto que corresponde a una etiqueta que se mostrará en el interfaz de la aplicación, se podrá introducir bien un texto único o un objeto JSON que contenga pares clave valor para cada idioma deseado, siendo la clave el código ISO de dicho idioma.
 
-Para cada una de estas plataformas, Codoozer genera el código fuente, además de compilar el proyecto y entregar la app final ejecutable.
+En caso de querer usar más de un idioma, uno de ellos debería usar la clave `default` en lugar de su código ISO, para que el software sepa cuáles son los textos a mostrar en caso de que el idioma del usuario final no sea uno de los definidos en la app.
 
-Para acceder a Codoozer, es necesario crear una cuenta en [https://codoozer.com](https://codoozer.com)
+Aquí se puede ver un ejemplo de idioma único:
 
-La forma de crear aplicaciones con Codoozer se basa en la edición de archivos JSON para definir todos los aspectos de la misma. Los archivos JSON son archivos de texto plano en los que se estructura la información siguiendo unas normas. 
+`"name":"Mi app genial"`
 
-En su página web, Codoozer ofrece un editor asistido de estos archivos JSON, lo cual facilita muchísimo el trabajo y evita muchos errores. En la siguiente imagen se muestra un pantallazo de dicho editor.
+Y en este otro ejemplo, podemos ver el mismo texto con multilenguaje:
 
-![](../../resources/dashboard_sample.png)
-
-Alternativamente, Codoozer también permite a sus usuarios crear las apps en modo local, desde su computadora, utilizando cualquier editor de texto o cualquier entorno de desarrollo integrado (IDE). 
+<pre>
+"name":{
+  "default":"My cool app",
+  "es":"Mi app genial"
+}
+</pre>
