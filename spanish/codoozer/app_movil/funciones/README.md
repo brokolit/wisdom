@@ -34,7 +34,7 @@ Veamos primero los diferentes tipos de funciones, enumerados en esta tabla:
 | Tipo  | Descripción |
 | ------------- | ------------- |
 | abort | Detiene la ejecución de la cadena de funciones en la que está incluída.|
-| add | Añade contenido a un elemento. Por ejemplo, un registro a una base de datos. |
+| [add](#function-add) | Añade contenido a un elemento. Por ejemplo, un registro a una base de datos. |
 | back  | Vuelve a la vista anterior en el historial de navegación.|
 | delete | Elimina contenido de un elemento. Por ejemplo, elimina un registro de una base de datos.|
 | divide | Realiza una operación de división.|
@@ -54,5 +54,5 @@ Veamos primero los diferentes tipos de funciones, enumerados en esta tabla:
 | set | Establece un valor para una referencia.|
 
 
-## Función ADD
+## Function ADD
 
