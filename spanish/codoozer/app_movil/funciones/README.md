@@ -35,7 +35,7 @@ Veamos primero los diferentes tipos de funciones, enumerados en esta tabla:
 | ------------- | ------------- |
 | abort | Detiene la ejecución de la cadena de funciones en la que está incluída.|
 | [add](#function-add) | Añade contenido a un elemento. Por ejemplo, un registro a una base de datos. |
-| back  | Vuelve a la vista anterior en el historial de navegación.|
+| back | Vuelve a la vista anterior en el historial de navegación.|
 | [delete](#function-delete) | Elimina contenido de un elemento. Por ejemplo, elimina un registro de una base de datos.|
 | [divide](#function-divide) | Realiza una operación de división.|
 | finish | Elimina la pantalla actual del historial de navegación.|
@@ -56,23 +56,102 @@ Veamos primero los diferentes tipos de funciones, enumerados en esta tabla:
 
 
 ## Function ADD
-bla bla bla
+Añade contenido a un elemento. Por ejemplo, un registro a una base de datos.
+
+Estos son sus parámetros:
+
+| Tipo  | Descripción |
+| ------------- | ------------- |
+| what | Contiene un objeto JSON con uno o varios parámetros clave-valor, que es lo que queremos añadir.|
+| to | Referencia al elemento al que queremos añadir el contenido.|
+
+Ejemplo:
+<pre>
+{
+	"function":"add",
+	"what":
+		{
+			"name":"John",
+			"age":23
+		}
+	"to":"@firebase.firestore.students"
+}
+</pre>
 
 
 ## Function DELETE
-bla bla bla
+Elimina contenido de un elemento. Por ejemplo, elimina un registro de una base de datos.
 
+Estos son sus parámetros:
+
+| Tipo  | Descripción |
+| ------------- | ------------- |
+| what | Referencia al contenido que queremos eliminar.|
+
+Ejemplo:
+<pre>
+{
+	"function":"delete",
+	"what":"@firebase.firestore.students.(@property.selectedStudent)"
+}
+</pre>
 
 ## Function DIVIDE
-bla bla bla
+Realiza una operación de división.
+
+Estos son sus parámetros:
+
+| Tipo  | Descripción |
+| ------------- | ------------- |
+| what | Referencia cuyo valor lo queremos dividir por una cantidad.|
+| by | Cantidad por la que queremos dividir.|
+
+Ejemplo:
+<pre>
+{
+	"function":"divide",
+	"what":"@property.score",
+	"by":2
+}
+</pre>
 
 
 ## Function GOTO
-bla bla bla
+Navega a otra vista de la app.
+
+Estos son sus parámetros:
+
+| Tipo  | Descripción |
+| ------------- | ------------- |
+| view | ID de la vista a la que queremos navegar.|
+
+Ejemplo:
+<pre>
+{
+	"function":"goto",
+	"view":"main_menu"
+}
+</pre>
 
 
 ## Function INCREASE
-bla bla bla
+Realiza una operación de suma.
+
+Estos son sus parámetros:
+
+| Tipo  | Descripción |
+| ------------- | ------------- |
+| what | Referencia a cuyo valor le queremos sumar una cantidad.|
+| by | Cantidad que queremos sumar.|
+
+Ejemplo:
+<pre>
+{
+	"function":"increase",
+	"what":"@property.score",
+	"by":5
+}
+</pre>
 
 
 ## Function LOGIN
@@ -84,7 +163,23 @@ bla bla bla
 
 
 ## Function MULTIPLY
-bla bla bla
+Realiza una operación de multiplicación.
+
+Estos son sus parámetros:
+
+| Tipo  | Descripción |
+| ------------- | ------------- |
+| what | Referencia cuyo valor lo queremos multiplicar por una cantidad.|
+| by | Cantidad por la que queremos multiplicar.|
+
+Ejemplo:
+<pre>
+{
+	"function":"multiply",
+	"what":"@property.score",
+	"by":2
+}
+</pre>
 
 
 ## Function OPEN
@@ -96,15 +191,83 @@ bla bla bla
 
 
 ## Function POPUP
-bla bla bla
+Muestra una ventana emergente.
+
+Estos son sus parámetros:
+
+| Tipo  | Descripción |
+| ------------- | ------------- |
+| dialog | ID del diálogo que queremos mostrar|
+
+Ejemplo:
+<pre>
+{
+	"function":"popup",
+	"dialog":"should_accept_policy"
+}
+</pre>
 
 
 ## Function REDUCE
-bla bla bla
+Realiza una operación de resta.
+
+Estos son sus parámetros:
+
+| Tipo  | Descripción |
+| ------------- | ------------- |
+| what | Referencia a cuyo valor le queremos restar una cantidad.|
+| by | Cantidad a restar.|
+
+Ejemplo:
+<pre>
+{
+	"function":"reduce",
+	"what":"@firebase.firestore.users.(@firebase.user.id).kids.(@property.selectedKid).score",
+	"by":10
+}
+</pre>
 
 
 ## Function SIGNUP
-bla bla bla
+Crea una cuenta de usuario en el sistema de usuarios utilizado.
+
+Estos son sus parámetros:
+
+| Tipo  | Descripción |
+| ------------- | ------------- |
+| provider | Proveedor de autenticación. Actualmente solo se acepta "firebase".|
+| email | Email del usuario.|
+| pass | Contraseña introducida por el usuario.|
+| onvalid | Contiene una función (o una secuencia de funciones) que se ejecutará si el creación de la cuenta es exitosa.|
+| oninvalid | Contiene una función (o una secuencia de funciones) que se ejecutará si la creación de la cuenta fracasa.|
+| onexists | Contiene una función (o una secuencia de funciones) que se ejecutará si el usuario ya existe en el sistema.|
+| onweakpassword | Contiene una función (o una secuencia de funciones) que se ejecutará si se detecta que la contraseña es muy débil y, por tanto, no es válida.|
+
+Ejemplo:
+<pre>
+{
+	"function":"signup",
+	"provider":"firebase",
+	"email":"@property.email",
+	"pass":"@property.pass",
+	"onvalid":{
+		"function":"goto",
+		"view":"main"
+	},
+	"oninvalid":{
+		"function":"popup",
+		"dialog":"signup_error"
+	},
+	"onexists":{
+		"function":"popup",
+		"dialog":"user_exists"
+	},
+	"onweakpassword":{
+		"function":"popup",
+		"dialog":"weak_password"
+	}
+}
+</pre>
 
 
 ## Function STOP
@@ -118,10 +281,10 @@ Estos son sus parámetros:
 
 Ejemplo:
 <pre>
-	{
-		"function":"stop",
-		"what":"song.mp3"
-	}
+{
+	"function":"stop",
+	"what":"song.mp3"
+}
 </pre>
 
 
@@ -137,10 +300,10 @@ Estos son sus parámetros:
 
 Ejemplo:
 <pre>
-	{
-		"function":"set",
-		"what":"@property.city",
-		"value":"Valencia"
-	}
+{
+	"function":"set",
+	"what":"@property.city",
+	"value":"Valencia"
+}
 </pre>
 
