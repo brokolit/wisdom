@@ -31,4 +31,4 @@ Estructura en función del proyecto
 
 Para aprender más sobre la estructura del proyecto, elige uno de los tipos de proyecto:
 
-[App móvil nativa](https://github.com/brokolit/wisdom/edit/master/spanish/codoozer/estructura_de_un_proyecto/app_movil)
+[App móvil nativa](https://github.com/brokolit/wisdom/tree/master/spanish/codoozer/app_movil)
