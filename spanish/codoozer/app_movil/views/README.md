@@ -1,2 +1,3 @@
-# wisdom
-Here you will find useful documentation regarding Brokolit products
+# Carpeta views
+
+En esta carpeta se incluirán todas las vistas (páginas) de la app.
