@@ -23,7 +23,7 @@ La carpeta raíz solo contendrá un archivo JSON principal, app.json, que contie
 
 Además de los archivos JSON, un proyecto contendrá archivos de recursos, que son el contenido de la app (imágenes, audios, vídeos, etc.).
 
-
+(underline)
 =============
 
 Para aprender más sobre la estructura del proyecto, elige uno de los tipos de proyecto:
