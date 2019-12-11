@@ -20,3 +20,10 @@ En su página web, Codoozer ofrece un editor asistido de estos archivos JSON, lo
 ![](../../resources/dashboard_sample.png)
 
 Alternativamente, Codoozer también permite a sus usuarios crear las apps en modo local, desde su computadora, utilizando cualquier editor de texto o cualquier entorno de desarrollo integrado (IDE). 
+
+
+
+### Siguientes pasos:
+
+- [Conceptos básicos](conceptos_basicos)
+- [Crear una app móvil nativa](app_movil)
