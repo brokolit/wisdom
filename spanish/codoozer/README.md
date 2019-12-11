@@ -1,2 +1,3 @@
-# wisdom
-Here you will find useful documentation regarding Brokolit products
+# ¿Qué es Codoozer?
+
+Codoozer es una herramienta para crear software sin necesidad de disponer de conocimientos de programación.
