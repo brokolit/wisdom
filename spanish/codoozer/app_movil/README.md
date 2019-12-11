@@ -29,9 +29,11 @@ app.json
 Es el archivo JSON principal, que contiene la definición de los aspectos globales de la app, así como la configuración necesario para la generación de la app ejecutable.
 
 
+
 ### Carpeta dialogs
 ---
 Esta carpeta solo es necesaria en caso de que queramos definir diálogos en nuestra app. Los diálogos son ventanas emergente que podemos utilizar para informar al usuario de algo o solicitarle algún tipo de información.
+
 
 
 ### Carpeta external
@@ -39,11 +41,13 @@ Esta carpeta solo es necesaria en caso de que queramos definir diálogos en nues
 Esta carpeta solo es necesaria en caso de que queramos utilizar algún complemento ofrecido por un tercero. Por ejemplo, si vamos a utilizar Firebase de Google en nuestra app, deberíamos crear la carpeta `external` y poner dentro de ella el archivo `google-services.json`.
 
 
+
 ### Carpeta menus
 ---
 Esta carpeta solo es necesaria si tenemos previsto incluir menús nativos dentro de nuestra app. Estos son los menús que se utilizan, por ejemplo, en las barras ActionBar, paneles laterales, componentes tipo `list`, etc.
 
 En cambio, si lo que se pretende es que los menús de la app se compongan de componentes gráficos (imágenes, textos con enlaces, etc.), no será necesario crear esta carpeta.
+
 
 
 ### Carpeta res
@@ -60,7 +64,6 @@ Los archivos que se incluyan dentro de la subcarpeta `assets` se incluirán SIEM
 
 Esta carpeta solo será necesaria si queremos incluir fuentes TTF dentro de nuestra app. Además de añadir los archivos en esta carpeta, será necesario dar de alta las fuente dentro del archivo app.json
 
-
 ##### res / icon
 
 Esta carpeta debe incluir como mínimo un archivo PNG, que será el que se utilizará como icono por defecto para todos aquellos casos en los que no se especifique un icono concreto.
@@ -72,8 +75,9 @@ También se puede añadir el prefijo `android` o `ios` para especificar que un i
 Incluso, se puede combinar el prefijo con un número. Por ejemplo, `android_192.png`.
 
 
+
 ### Carpeta view_types
-=============
+---
 Esta carpeta debe contener la definición de por lo menos un contenedor de vista.
 
 Los contenedores de vista se utilizan para crear los distintos entornos de la app. Múltiples vistas podrán hacer uso de un mismo contenedor de vista.
@@ -81,6 +85,7 @@ Los contenedores de vista se utilizan para crear los distintos entornos de la ap
 Un contenedor de vista, por ejemplo, definirá que las vistas que lo utilicen mostrarán una ActionBar y un menú lateral.
 
 
+
 ### Carpeta views
-=============
+---
 En esta carpeta se incluirán todas las vistas (páginas) de la app.
