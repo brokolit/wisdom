@@ -17,6 +17,6 @@ La forma de crear aplicaciones con Codoozer se basa en la edición de archivos J
 
 En su página web, Codoozer ofrece un editor asistido de estos archivos JSON, lo cual facilita muchísimo el trabajo y evita muchos errores. En la siguiente imagen se muestra un pantallazo de dicho editor.
 
-![](dashboard_sample.png)
+![](../../resources/dashboard_sample.png)
 
 Alternativamente, Codoozer también permite a sus usuarios crear las apps en modo local, desde su computadora, utilizando cualquier editor de texto o cualquier entorno de desarrollo integrado (IDE). 
