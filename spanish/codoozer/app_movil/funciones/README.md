@@ -112,4 +112,21 @@ bla bla bla
 
 
 ## Function SET
-bla bla bla
+Establece un valor para una referencia.
+
+Debe incluir estos parámetros:
+
+| Tipo  | Descripción |
+| ------------- | ------------- |
+| what | Referencia a la que queremos establecer un valor.|
+| value | Valor que queremos asignar.|
+
+Ejemplo:
+<pre>
+{
+	"function":"set",
+	"what":"@property.city",
+	"value":"Valencia"
+}
+</pre>
+
