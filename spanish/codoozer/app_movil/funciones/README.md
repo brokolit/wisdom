@@ -11,7 +11,21 @@ En este fragmento se muestra la definición mínima de un objeto `function`:
 }
 </pre>
 
-Además, dependiendo del tipo de función que estemos definiendo, podrá haber otros parámetros que complementen la definición de la función.
+Las funciones se pueden invocar individualmente o como una secuencia, mediante un array de objetos, de modo que se ejecutarán una después de la otra:
+
+<pre>
+[
+	{
+		"function":"play"
+	},
+	{
+		"function":"goto"
+	}
+]
+</pre>
+
+
+Dentro de cada objeto función, dependiendo del tipo de función que estemos definiendo, podrá haber otros parámetros que complementen la definición de la función.
 
 Veamos primero los diferentes tipos de funciones, enumerados en esta tabla:
 
