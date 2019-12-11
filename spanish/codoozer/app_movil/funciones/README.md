@@ -27,7 +27,9 @@ Las funciones se pueden invocar individualmente o como una secuencia, mediante u
 
 Dentro de cada objeto función, dependiendo del tipo de función que estemos definiendo, podrá haber otros parámetros que complementen la definición de la función.
 
+
 Veamos primero los diferentes tipos de funciones, enumerados en esta tabla:
+
 
 | Tipo  | Descripción |
 | ------------- | ------------- |
@@ -50,3 +52,7 @@ Veamos primero los diferentes tipos de funciones, enumerados en esta tabla:
 | signup | Crea una cuenta de usuario en el sistema de usuarios utilizado.|
 | stop | Detiene la reproducción de un archivo de audio.|
 | set | Establece un valor para una referencia.|
+
+
+## Función ADD
+
