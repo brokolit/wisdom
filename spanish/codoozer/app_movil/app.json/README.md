@@ -18,6 +18,8 @@ La siguiente tabla muestra los parámetros que puede contener:
   | [fonts](#tipografías-fonts) | Opcional | Contiene una tabla de fuentes TTF, en caso de que se quieran utilizar en la app.|
 
 
+Si quieres ver un emplo de archivo app.json, [pincha aquí](app.json)
+
 
 ## Configuración Android
 
