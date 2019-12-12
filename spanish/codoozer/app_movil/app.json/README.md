@@ -83,6 +83,20 @@ El parámetro `monetization` especifica la configuración de la monetización. L
   |  |  |  | banner_id | id de código de anuncios para formato banner |
 
 
+A continuación se muestra un ejemplo:
+<pre>
+    "monetization":{
+        "android":{
+            "ads":{
+                "admob":{
+                    "app_id":"ca-app-pub-5xxxx85829042252~70xxxxxxxx",
+                    "banner_id":"ca-app-pub-5xxxx85829042252/62xxxxxxxx"
+                }
+            }
+        }
+    }
+</pre>
+
 
 
 ## Colores
