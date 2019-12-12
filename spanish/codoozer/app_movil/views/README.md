@@ -79,15 +79,30 @@ Los parámetros comunes son:
   | halign | Opcional | center | Alineamiento horizontal del componente con respecto a su contenedor. Puede ser `start`, `left`, `center`, `right` o `end`. |
   | height | Opcional | fill | Alto del elemento. Puede tener los valores `fill`, `wrap`, un número de puntos de densidad (dp), o un porcentaje. |
   | [if](#condicionales) | Opcional || Permite definir una condición, de modo que el componente solo se muestre en caso de cumplirse dicha condición. El valor es un objeto JSON.|
-  | [margin](#margenes-y-padding) | Opcional | 0 | Define los márgenes que hay que dejar alrededor del componente, con respecto a los límites del contenedor o a los límites de componentes adyacentes.|
-  | [padding](#margenes-y-padding) | Opcional | 0 | Define los márgenes internos que hay que dejar entre los límites del componente y su contenido.|
+  | [margin](#márgenes-y-padding) | Opcional | 0 | Define los márgenes que hay que dejar alrededor del componente, con respecto a los límites del contenedor o a los límites de componentes adyacentes.|
+  | [padding](#márgenes-y-padding) | Opcional | 0 | Define los márgenes internos que hay que dejar entre los límites del componente y su contenido.|
   | valign | Opcional | middle | Alineamiento vertical del componente con respecto a su contenedor. Puede ser `top`, `middle` o `bottom`.|
   | width | Opcional | fill | Ancho del elemento. Puede tener los valores `fill`, `wrap`, un número de puntos de densidad (dp), o un porcentaje. |
   
   
 ## Background
+El fondo de un objeto se define mediante un objeto JSON que debe tener estos parámetros:
+
+| Key  | Descripción |
+| ------------- | ------------- |
+| type | Tipo de fondo. Puede ser `solid` o `image`. |
+| value | En caso de ser un fondo de tipo `solid`, el valor sería o un color (formato #RRGGBB o #AARRGGBB) o una referencia a un color de la tabla de colores (p.ej.: @color.white). En caso de un fondo de tipo `image`, habría que indicar el nombre del archivo que contiene la imagen. |
 
 ## Condicionales
+Los condicionales se utilizan para especificar si la aparición de un componente debe ocurrir solo en caso de que se cumpla cierta condición. Los condicionales se definen mediante el parámetro `if`, cuyo valor será un objeto JSON, que podrá tener a su vez estos parámetros:
+
+  | Key  | Caracter | Descripción |
+  | ------------- | ------------- | ------------- |
+  | what | Obligatorio | Referencia que queremos evaluar |
+  | is | Opcional | Valor o refencia con cuyo valor queremos comparar. La condición se cumplirá si el valor de `what` es igual al valor especificado en `is`.|
+  | is_not | Opcional | Valor o refencia con cuyo valor queremos comparar. La condición se cumplirá si el valor de `what` es distinta al valor especificado en `is_not`.|
+  
+  
 
 ## Márgenes y padding
 Tanto el parámetro `margin` como el de `padding` puede tener un valor numérico (como puntos de densidad), para definir el margen o padding en las 4 direcciones, o un objeto JSON si se quiere especificar un valor en una o varias de las direcciones (top, start, bottom, end).
