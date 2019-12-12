@@ -11,7 +11,7 @@ La siguiente tabla muestra los parámetros que puede contener:
   | title | Opcional | Nombre de la vista. Si la vista está incluida en un contenedor con ActionBar, el título se mostrará en dicha barra. |
   | [view_wrapper](#contenedor-de-una-vista-view_wrapper) | Obligatorio | ID del contenedor de vista a utilizar. |
   | [events](#eventos-de-la-vista) | Opcional | Define el comportamiento de la vista como respuesta a determinados eventos.|
-  | content | Obligatorio | Define el contenido de la vista |
+  | [content](#contenido-de-la-vista) | Obligatorio | Define el contenido de la vista |
   
 
 
@@ -29,7 +29,7 @@ Para más información sobre los view_wrappers, [pincha aquí](../view_wrappers)
 
 
 ## Eventos de la vista
-El parámetro `events` contiene un objeto JSON que incluye la lista de eventos para los cuales queremos que la app reaccione cuando está cargada una vista concreta..
+El parámetro `events` contiene un objeto JSON que incluye la lista de eventos para los cuales queremos que la app reaccione cuando está cargada una vista concreta.
 
 Estos son los eventos disponibles:
 
@@ -47,3 +47,54 @@ Aquí se puede ver un ejemplo:
     },
 </pre>
 
+
+## Contenido de la vista
+El parámetro `content` contiene un array JSON que contiene la lista de componentes visuales que queremos incluir en la vista.
+
+Los componentes que se pueden incluir son:
+
+| Key  | Descripción |
+| ------------- | ------------- |
+| banner | Banner de publicidad |
+| button | Botón |
+| group | Grupo que permite incluir dentro otros componentes |
+| image | Imagen |
+| inputtext | Campo de entrada de texto |
+| list | Lista o rejilla |
+| map | Mapa de GoogleMaps |
+| pdfviewer | Visor de archivos pdf |
+| range | Selector con barra de desplazamiento |
+| switch | Conmutador on/off |
+| text | Para mostrar un texto |
+| web | Para mostrar una página web incrustada |
+
+Todos los componentes se definen como objetos JSON, los cuales contendrán unos parámetros generales, independientes del tipo de componente de que se trate, así como otros parámetros específicos en función del tipo de componente.
+
+Los parámetros comunes son:
+
+  | Key  | Caracter | Valor por defecto | Descripción |
+  | ------------- | ------------- | ------------- | ------------- |
+  | [background](#background) | Opcional | | Define el fondo del componente. El valor es un objeto JSON en el que se define el fondo. |
+  | events | Opcional || Define si hay que lanzar alguna función como respuesta a algún evento. Los tipos de eventos pueden variar en función del tipo de componente, aunque el evento `onclick` será común a todos los tipos de componente, aunque podría haber alguna excepción.|
+  | halign | Opcional | center | Alineamiento horizontal del componente con respecto a su contenedor. Puede ser `start`, `left`, `center`, `right` o `end`. |
+  | height | Opcional | fill | Alto del elemento. Puede tener los valores `fill`, `wrap`, un número de puntos de densidad (dp), o un porcentaje. |
+  | [if](#condicionales) | Opcional || Permite definir una condición, de modo que el componente solo se muestre en caso de cumplirse dicha condición. El valor es un objeto JSON.|
+  | [margin](#margenes-y-padding) | Opcional | 0 | Define los márgenes que hay que dejar alrededor del componente, con respecto a los límites del contenedor o a los límites de componentes adyacentes.|
+  | [padding](#margenes-y-padding) | Opcional | 0 | Define los márgenes internos que hay que dejar entre los límites del componente y su contenido.|
+  | valign | Opcional | middle | Alineamiento vertical del componente con respecto a su contenedor. Puede ser `top`, `middle` o `bottom`.|
+  | width | Opcional | fill | Ancho del elemento. Puede tener los valores `fill`, `wrap`, un número de puntos de densidad (dp), o un porcentaje. |
+  
+  
+## Background
+
+## Condicionales
+
+## Márgenes y padding
+Tanto el parámetro `margin` como el de `padding` puede tener un valor numérico (como puntos de densidad), para definir el margen o padding en las 4 direcciones, o un objeto JSON si se quiere especificar un valor en una o varias de las direcciones (top, start, bottom, end).
+
+<pre>
+  "margin":40,
+  "padding":{
+    "top":10,
+    "bottom":10
+  }
