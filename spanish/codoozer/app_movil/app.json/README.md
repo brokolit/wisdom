@@ -18,10 +18,21 @@ La siguiente tabla muestra los parámetros que puede contener:
   | [fonts](#tipografías-fonts) | Opcional | Contiene una tabla de fuentes TTF, en caso de que se quieran utilizar en la app.|
 
 
+
 Si quieres ver un emplo de archivo app.json, [pincha aquí](app.json)
 
 
+
+
 ## Configuración Android
+El parámetro `android` contiene algunas configuraciones necesarias para poder compilar la versión Android de la app.
+
+  | Key  | Caracter | Descripción |
+  | ------------- | ------------- | ------------- |
+  | package_name | Obligatorio | Nombre del paquete Android de la app. Debe ser un identificador único de la app, no pudiendo publicarse en los AppStores si ya existiera otro con el mismo nombre de paquete Android. |
+  | version | Obligatorio | El número de versión que queremos compilar. Debe ser un número entero y deberíamos aumentar el valor cada vez que queramos actualizar la app en GooglePlay. |
+  | version_name | Opcional | Es una cadena de texto que contiene tres números concatenados por puntos, indicando el número de versión, y subversión. De no introducirse, se cogerá el número de versión y se le añadirán dos ceros (1.0.0) |
+  | maps_api_key | Opcional | Se deberá introducir en el caso de que queramos utilizar mapas de google dentro de la app. En este [enlace](https://developers.google.com/maps/documentation/android-sdk/get-api-key) se puede obtener información sobre cómo obtener el API key.|
 
 
 ## Configuración iOS
@@ -29,7 +40,22 @@ Si quieres ver un emplo de archivo app.json, [pincha aquí](app.json)
 Información no disponible.
 
 
+
 ## Eventos de la app
+El parámetro `events` contiene un objeto JSON que incluye la lista de eventos para los cuales queremos que la app reaccione.
+
+Actualmente solo es posible definir el evento `onstart`, en el que se definirá el comportamiento de la app nada más abrirla. Normalmente este evento se utilizará para indicar la vista que hay que abrir en primer lugar.
+
+Aquí se puede ver un ejemplo:
+
+<pre>
+    "events":{
+        "onstart": {"function":"goto","view":"main"}
+    },
+</pre>
+
+Más adelante se definirán otros eventos, como el `onexit`, `onpush`, etc.
+
 
 
 ## Colores
@@ -55,4 +81,16 @@ A continuación se puede ver un ejemplo:
     }
 </pre>
 
+
 ## Tipografías (fonts)
+El valor del parámetro `fonts` es un objeto JSON que contiene una lista de parámetros clave-valor, cada uno representando a una tipografía. La clave será el identificador que se quiera asignar a la tipografía, mediante el cual se hará referencia desde otras partes de la app, y el valor será el nombre del archivo que contiene la fuente, alojado en la subcarpeta `fonts`, que está dentro de `res`.
+
+A continuación se puede ver un ejemplo:
+<pre>
+    "fonts":{
+        "young":"fonts/Louis_George_Cafe.ttf",
+        "renner":"fonts/Renner_ 400Book.ttf",
+        "monospatial":"fonts/nk57-monospace-no-lt.ttf",
+        "linux":"fonts/LinLibertine_R.ttf"
+    }
+</pre>
