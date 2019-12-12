@@ -14,6 +14,7 @@ La siguiente tabla muestra los parámetros que puede contener:
   | [android](#configuración-android) | Opcional | Contiene configuración específica para generar la versión compatible con dispositivos Android. Por tanto, solo es necesario en caso de que se desee generar dicha versión. |
   | [ios](#configuración-ios) | Opcional | Contiene configuración específica para generar la versión compatible con dispositivos iOS (Apple). Por tanto, solo es necesario en caso de que se desee generar dicha versión. |
   | [events](#eventos-de-la-app) | Obligatorio | Define el comportamiento de la app como respuesta a determinados eventos. Debe contener, como mínimo, el evento `onstart`, en el que definiremos qué debe hacer la app al ejecutarse. Por ejemplo, la función `goto` para cargar una vista. |
+  | [monetization](#monetización) | Opcional | Contiene la configuración necesaria para activar la monetización por publicidad |
   | [colors](#colores) | Opcional | Contiene una tabla de colores, para poder referenciarlos desde partes de la app, con el objetivo de poder cambiar todo el aspecto de la app desde un mismo sitio. |
   | [fonts](#tipografías-fonts) | Opcional | Contiene una tabla de fuentes TTF, en caso de que se quieran utilizar en la app.|
 
@@ -33,6 +34,20 @@ El parámetro `android` contiene algunas configuraciones necesarias para poder c
   | version | Obligatorio | El número de versión que queremos compilar. Debe ser un número entero y deberíamos aumentar el valor cada vez que queramos actualizar la app en GooglePlay. |
   | version_name | Opcional | Es una cadena de texto que contiene tres números concatenados por puntos, indicando el número de versión, y subversión. De no introducirse, se cogerá el número de versión y se le añadirán dos ceros (1.0.0) |
   | maps_api_key | Opcional | Se deberá introducir en el caso de que queramos utilizar mapas de google dentro de la app. En este [enlace](https://developers.google.com/maps/documentation/android-sdk/get-api-key) se puede obtener información sobre cómo obtener el API key.|
+  | firebase | Opcional | Se deberá introducir en el caso de que queramos utilizar algún producto de Firebase, como las notificaciones push, analytics, etc. El valor de este parámetro será un objeto JSON que definirá qué productos de Firebase se quiere utilizar. Más abajo se explican estos parámetros.|
+  
+
+La siguiente tabla muestra los parámetros que acepta el valor del parámetro `firebase`. Para activar un producto, basta con incluir la clave correspondiente y asignarle valor `true`:
+
+  | Key  | Descripción |
+  | ------------- | ------------- |
+  | analytics | Firebase analytics |
+  | authentication | Autenticación de usuarios de Firebase |
+  | firestore | Base de datos firestore |
+  | inapp-messaging | Mensajería in-app |
+  | messaging | Notificaciones push |
+  
+
 
 
 ## Configuración iOS
@@ -55,6 +70,18 @@ Aquí se puede ver un ejemplo:
 </pre>
 
 Más adelante se definirán otros eventos, como el `onexit`, `onpush`, etc.
+
+
+
+## Monetización
+El parámetro `monetization` especifica la configuración de la monetización. La siguiente tabla muestra la estructura del objeto JSON:
+
+
+  | Key  |||||
+  | ------------- | ------------- | ------------- | ------------- | ------------- |
+  | android | ads | admob | app_id | valor del App ID ofrecido por admob |
+  |  |  |  | banner_id | id de código de anuncios para formato banner |
+
 
 
 
