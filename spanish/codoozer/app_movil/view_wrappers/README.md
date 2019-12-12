@@ -22,11 +22,11 @@ Si no se añade ningún componente, el contenedor de vistas será un entorno a p
 ## ActionBar
 Un ActionBar es una barra superior que se muestra en la pantalla y puede contener, además de un título, botones de acción.
   
-    | Key  | Descripción |
-    | ------------- | ------------- |
-    | back_button | Indica si la barra debe mostrar un botón de volver a la izquierda del título |
-    | title | Título a mostrar en la barra. Acepta multilenguaje |
-    | menu | Es el ID del menú definido en la carpeta `menus` que queremos añadir a la barra. Las opciones del menú se pueden mostrar como iconos de acción o aparecer dentro de un menú emergente, en función de como se defina en el JSON del menú correspondiente. |
+  | Key  | Descripción |
+  | ------------- | ------------- |
+  | back_button | Indica si la barra debe mostrar un botón de volver a la izquierda del título |
+  | title | Título a mostrar en la barra. Acepta multilenguaje |
+  | menu | Es el ID del menú definido en la carpeta `menus` que queremos añadir a la barra. Las opciones del menú se pueden mostrar como iconos de acción o aparecer dentro de un menú emergente, en función de como se defina en el JSON del menú correspondiente. |
   
   
 
@@ -35,12 +35,12 @@ Un ActionBar es una barra superior que se muestra en la pantalla y puede contene
 ## Drawer
 Un Drawer es un panel lateral que aparece al hacer swipe desde el borde lateral de la pantalla del dispositivo o al pulsar en el botón correspondiente en un ActionBar.
   
-    | Key  | Descripción |
-    | ------------- | ------------- |
-    | icon | Nombre del archivo que contiene el icono |
-    | title | Título a mostrar en la cabecera del panel. Acepta multilenguaje |
-    | subtitle | Subtítulo a mostrar en la cabecera del panel. Acepta multilenguaje |
-    | menu | Título a mostrar en la cabecera del panel. Acepta multilenguaje |
+  | Key  | Descripción |
+  | ------------- | ------------- |
+  | icon | Nombre del archivo que contiene el icono |
+  | title | Título a mostrar en la cabecera del panel. Acepta multilenguaje |
+  | subtitle | Subtítulo a mostrar en la cabecera del panel. Acepta multilenguaje |
+  | menu | Título a mostrar en la cabecera del panel. Acepta multilenguaje |
   
   
   
