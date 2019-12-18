@@ -1,0 +1,27 @@
+{
+	"project_name":"helloworld",
+	"name":{
+		"default":"Hello world!",
+		"es":"¡Hola mundo!"
+	},
+	"android":{
+		"package_name":"com.codoozer.samples.helloworld",
+		"version":1,
+		"version_name":"1.0.0"
+	},
+	"events":{
+		"onstart":{
+			"function":"goto",
+			"view":"main"
+		}
+	},
+	"colors":{
+		"white":"#FFFFFF",
+		"colorPrimary":"#8bc34a",
+		"colorPrimaryDark":"#5a9216",
+		"colorAccent":"#000000"
+	},
+	"fonts":{
+		"times":"fonts/times.ttf"
+	}
+}

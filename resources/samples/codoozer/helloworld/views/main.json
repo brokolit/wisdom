@@ -1,0 +1,22 @@
+{
+	"id":"main",
+	"wrapper":"toolbar",
+	"orientation":"vertical",
+	"content":[
+		{
+			"id":"txtHello",
+			"type":"text",
+			"width":"100%",
+			"height":"wrap",
+			"text_align":"center",
+			"valign":"middle",
+			"font_size":"30",
+			"font":"times",
+			"color":"@color.colorPrimaryDark",
+			"text":{
+				"default":"Hello world!",
+				"es":"¡Hola mundo!"
+			}
+		}
+	]
+}

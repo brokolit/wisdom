@@ -1,0 +1,12 @@
+{
+	"id":"toolbar",
+	"actionbar":{
+		"back_button":true,
+		"color":"@color.white",
+		"background":"@color.colorPrimary",
+		"title":{
+			"default":"Hello world!",
+			"es":"¡Hola mundo!"
+		}
+	}
+}
