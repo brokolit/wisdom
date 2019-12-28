@@ -1,0 +1,100 @@
+{
+    "id": "third",
+    "wrapper": "paginator",
+    "orientation": "vertical",
+    "title":{
+        "default":"Third",
+        "es":"Tres"
+    },
+    "content": [
+        {
+            "id": "barThird",
+            "type": "group",
+            "width": "100%",
+            "height": 64,
+            "background": {
+                "type": "solid",
+                "value": "@color.colorPrimary"
+            },
+            "content": [
+                {
+                    "id": "txtBarThird",
+                    "type": "text",
+                    "width": "100%",
+                    "height": "wrap",
+                    "text_align": "center",
+                    "valign": "middle",
+                    "font_size": "24",
+                    "font": "renner",
+                    "color": "@color.white",
+                    "text": {
+                        "default": "Texts and inputs",
+                        "es": "Textos y campos"
+                    }
+                }
+            ]
+        },
+        {
+            "id": "body",
+            "type": "group",
+            "width": "100%",
+            "height": "fill",
+            "scroll": true,
+            "content": [
+                {
+                    "id": "txtInstructionsThird",
+                    "type": "text",
+                    "width": "90%",
+                    "height": "wrap",
+                    "halign":"center",
+                    "text_align": "start",
+                    "font_size": "18",
+                    "font": "renner",
+                    "color": "@color.colorPrimaryDark",
+                    "margin": {
+                        "top": 32,
+                        "bottom": 32
+                    },
+                    "text": {
+                        "default": "Enter a text in this input field and you will see how the label below it will change:",
+                        "es": "Escribe un texto en este campo y verás cómo cambia la etiqueta de debajo:"
+                    }
+                },
+                {
+                    "id": "txtInputThird",
+                    "type": "inputtext",
+                    "width": "90%",
+                    "height": "wrap",
+                    "halign":"center",
+                    "font_size": "20",
+                    "font": "renner",
+                    "hint":{
+                        "default":"Enter a text here",
+                        "es":"Escribe un texto aquí"
+                    },
+                    "color": "@color.colorPrimaryDark",
+                    "source": "@property.label"
+                },
+                {
+                    "id": "txtLabelThird",
+                    "type": "text",
+                    "width": "90%",
+                    "height": "wrap",
+                    "background":{
+                        "type":"solid",
+                        "value":"@color.grey"
+                    },
+                    "padding":24,
+                    "halign":"center",
+                    "font_size": 18,
+                    "font": "renner",
+                    "color": "@color.colorPrimaryDark",
+                    "text":{
+                        "default":"This text will change as soon as you start typing above.",
+                        "es":"Este texto empezará a cambiar cuando escribas arriba."
+                    },
+                    "source": "@property.label"
+                }]
+        }
+    ]
+}

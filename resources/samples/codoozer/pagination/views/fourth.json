@@ -1,0 +1,140 @@
+{
+    "id": "fourth",
+    "wrapper": "paginator",
+    "orientation": "vertical",
+    "title":{
+        "default":"Fourth",
+        "es":"Cuatro"
+    },
+    "events": {
+        "onpreload": {
+            "function": "set",
+            "what": "@property.textsize",
+            "value": 32
+        }
+    },
+    "content": [
+        {
+            "id": "bar",
+            "type": "group",
+            "width": "100%",
+            "height": 64,
+            "background": {
+                "type": "solid",
+                "value": "@color.colorPrimary"
+            },
+            "content": [
+                {
+                    "id": "txtBarFourth",
+                    "type": "text",
+                    "width": "100%",
+                    "height": "wrap",
+                    "text_align": "center",
+                    "valign": "middle",
+                    "font_size": "24",
+                    "font": "renner",
+                    "color": "@color.white",
+                    "text": {
+                        "default": "Component properties",
+                        "es": "Propiedades de los componentes"
+                    }
+                }
+            ]
+        },
+        {
+            "id": "body",
+            "type": "group",
+            "width": "100%",
+            "height": "fill",
+            "scroll": true,
+            "content": [
+                {
+                    "id": "txtInstructionsFourth",
+                    "type": "text",
+                    "width": "90%",
+                    "height": "wrap",
+                    "halign": "center",
+                    "text_align": "start",
+                    "font_size": "18",
+                    "font": "renner",
+                    "color": "@color.colorPrimaryDark",
+                    "margin": {
+                        "top": 32,
+                        "bottom": 32
+                    },
+                    "text": {
+                        "default": "Now we're going to change some text properties in real time. Use the controls below the sample text and see what happens.",
+                        "es": "Ahora vamos a cambiar algunas propiedades del texto en tiempo real. Utiliza los controles bajo el texto de ejemplo y verás qué pasa."
+                    }
+                },
+                {
+                    "id": "txtSampleFourth",
+                    "type": "text",
+                    "width": "90%",
+                    "height": "wrap",
+                    "halign": "center",
+                    "text_align": "center",
+                    "font_size": "32",
+                    "font": "renner",
+                    "color": "@color.colorPrimaryDark",
+                    "margin": {
+                        "top": 32,
+                        "bottom": 32
+                    },
+                    "text": {
+                        "default": "SAMPLE",
+                        "es": "EJEMPLO"
+                    }
+                },
+                {
+                    "id": "txtRangeSize",
+                    "type": "range",
+                    "width": "90%",
+                    "height": "wrap",
+                    "halign": "center",
+                    "color": "@color.colorPrimaryDark",
+                    "min": 32,
+                    "max": 64,
+                    "step": 1,
+                    "source": "@property.textsize",
+                    "events": {
+                        "onchanged": {
+                            "function": "set",
+                            "what": "@element.txtSampleFourth.font_size",
+                            "value": "@property.textsize"
+                        }
+                    }
+                },
+                {
+                    "id": "txtSwitchColor",
+                    "type": "switch",
+                    "width": "90%",
+                    "height": "wrap",
+                    "halign": "center",
+                    "color": "@color.colorPrimaryDark",
+                    "source":"@property.switchValue",
+                    "margin":32,
+                    "events": {
+                        "onchanged": [{
+                                "function": "set",
+                                "what": "@element.txtSampleFourth.color",
+                                "value": "@color.colorPrimaryDark",
+                                "if": {
+                                    "what": "@property.switchValue",
+                                    "is": false
+                                }
+                            }, {
+                                "function": "set",
+                                "what": "@element.txtSampleFourth.color",
+                                "value": "@color.yellow",
+                                "if": {
+                                    "what": "@property.switchValue",
+                                    "is": true
+                                }
+                            }]
+                    }
+                }]
+        }
+    ]
+}
+

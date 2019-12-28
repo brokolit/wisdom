@@ -1,0 +1,9 @@
+{
+    "id": "paginator",
+    "pager": {
+        "tabs":true,
+        "views": [
+            "first", "second", "third", "fourth"
+        ]
+    }
+}

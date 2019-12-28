@@ -1,0 +1,41 @@
+{
+    "id": "first",
+    "wrapper": "paginator",
+    "orientation": "vertical",
+    "title":{
+        "default":"First",
+        "es":"Uno"
+    },
+    "content": [
+        {
+            "id": "txtWelcom",
+            "type": "text",
+            "width": "100%",
+            "height": "wrap",
+            "text_align": "center",
+            "valign": "middle",
+            "font_size": "30",
+            "font": "renner",
+            "color": "@color.colorPrimaryDark",
+            "text": {
+                "default": "Hey, how are you?",
+                "es": "¡Hola! ¿Cómo estás?"
+            }
+        },
+        {
+            "id": "txtInstructions",
+            "type": "text",
+            "width": "100%",
+            "height": "wrap",
+            "text_align": "center",
+            "valign": "middle",
+            "font_size": "20",
+            "font": "renner",
+            "color": "@color.colorPrimary",
+            "text": {
+                "default": "Swipe the screen to see more content",
+                "es": "Mueve la pantalla para ver más contenido"
+            }
+        }
+    ]
+}

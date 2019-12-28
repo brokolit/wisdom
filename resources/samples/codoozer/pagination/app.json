@@ -1,0 +1,29 @@
+{
+	"project_name":"pagination",
+	"name":{
+		"default":"Pagination!",
+		"es":"¡Paginación!"
+	},
+	"android":{
+		"package_name":"com.codoozer.samples.pagination",
+		"version":1,
+		"version_name":"1.0.0"
+	},
+	"events":{
+		"onstart":{
+			"function":"goto",
+			"view":"first"
+		}
+	},
+	"colors":{
+		"white":"#FFFFFF",
+		"colorPrimary":"#8bc34a",
+		"colorPrimaryDark":"#5a9216",
+		"colorAccent":"#000000",
+                "grey":"#E3E3E3",
+                "yellow":"#D4C600"
+	},
+	"fonts":{
+		"renner":"fonts/Renner_ 400Book.ttf"
+	}
+}
