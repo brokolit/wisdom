@@ -1,4 +1,4 @@
-# Welcome to the Brokolit's wisdom
+# Welcome to the Doyo's wisdom
 
 Here you will find useful documentation regarding Brokolit products.
 
