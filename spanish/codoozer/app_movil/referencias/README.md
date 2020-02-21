@@ -5,6 +5,7 @@ Las referencias tienen mucha importancia a la hora de crear apps con Codoozer, p
 Gracias a las referencias, podremos dotar de mucha interactividad entre la app y el usuario.
 
 
+
 ## Cómo usar las referencias
 
 Las referencias se pueden utilizar tanto para almacenar un dato en algún sitio como para recuperar un dato y utilizarlo.
@@ -25,7 +26,7 @@ Las referencias se representan como cadenas de texto, con lo que se incluirán d
 
 <pre>
 {
-	"function":"set"
+  "function":"set"
   "what":"@property.score",
   "value": 0
 }
@@ -35,7 +36,7 @@ También obtenerse el contenido de una referencia para utilizarlo de modo que pe
 
 <pre>
 {
-	"function":"set"
+  "function":"set"
   "what":"@property.fullName",
   "value": "(@property.name) (@property.lastName)"
 }
@@ -44,7 +45,7 @@ También obtenerse el contenido de una referencia para utilizarlo de modo que pe
 
 <pre>
 {
-	"function":"set"
+  "function":"set"
   "what":"@firebase.firestore.users.(@property.currentUserID).city",
   "value": "Valencia"
 }
