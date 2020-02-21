@@ -52,8 +52,8 @@ Veamos primero los diferentes tipos de funciones, enumerados en esta tabla:
 | [purchase](#function-purchase) | Inicia el flujo para realizar una compra in-app.|
 | [reduce](#function-reduce) | Realiza una operación de resta.|
 | refresh | Vuelve a cargar la pantalla actual.|
-| [reward()](#function-reward) | Lanza un anuncio de vídeo recompensado.|
-| [round()](#function-round) | Redondea un número.|
+| [reward](#function-reward) | Lanza un anuncio de vídeo recompensado.|
+| [round](#function-round) | Redondea un número.|
 | [signup](#function-signup) | Crea una cuenta de usuario en el sistema de usuarios utilizado.|
 | [stop](#function-stop) | Detiene la reproducción de un archivo de audio.|
 | [set](#function-set) | Establece un valor para una referencia.|
