@@ -18,7 +18,7 @@ Las referencias se pueden utilizar en diferentes sitios, como:
 - Como contenido de componentes (textos, imágenes, etc.).
 - Como operadores en condiciones.
 
-Para guardar un dato en una referencia, debemos utilizar la función SET. La misma acción sirve para editar el contenido en la referencia. También disponemos de otras funciones para alterar el contenido de una referencia: INCREASE, REDUCE, MULTIPLY y DIVICE.
+Para guardar un dato en una referencia, debemos utilizar la función SET. La misma acción sirve para editar el contenido en la referencia. También disponemos de otras funciones para alterar el contenido de una referencia: INCREASE, REDUCE, MULTIPLY y DIVIDE.
 
 Para utilizar una referencia, hay que escribir el símbolo **"@"** seguido de la ruta a la referencia. Los pasos de la ruta se separan con un punto, siendo el primer paso el que indica el [tipo de referencia](tipos-de-referencia).
 
