@@ -36,22 +36,28 @@ Veamos primero los diferentes tipos de funciones, enumerados en esta tabla:
 | abort | Detiene la ejecución de la cadena de funciones en la que está incluída.|
 | [add](#function-add) | Añade contenido a un elemento. Por ejemplo, un registro a una base de datos. |
 | back | Vuelve a la vista anterior en el historial de navegación.|
+| [browser](#function-browser) | Abre el navegador web externo y carga una URL.|
 | [delete](#function-delete) | Elimina contenido de un elemento. Por ejemplo, elimina un registro de una base de datos.|
 | [divide](#function-divide) | Realiza una operación de división.|
 | finish | Elimina la pantalla actual del historial de navegación.|
 | [goto](#function-goto) | Navega a otra vista de la app. |
 | [increase](#function-increase) | Realiza una operación de suma. |
+| [interstitial](#function-interstitial) | Muestra un anuncio a pantalla completa. |
 | [login](#function-login) | Autentica a un usuario en el sistema de usuarios utilizado.|
 | [logout](#function-logout) | Cierra la sesión del usuario actual. |
 | [multiply](#function-multiply) | Realiza una operación de multiplicación.|
 | [open](#function-open) | Abre una base de datos.|
 | [play](#function-play) | Reproduce un archivo de audio. |
 | [popup](#function-popup) | Muestra una ventana emergente.|
+| [purchase](#function-purchase) | Inicia el flujo para realizar una compra in-app.|
 | [reduce](#function-reduce) | Realiza una operación de resta.|
 | refresh | Vuelve a cargar la pantalla actual.|
+| [reward()](#function-reward) | Lanza un anuncio de vídeo recompensado.|
+| [round()](#function-round) | Redondea un número.|
 | [signup](#function-signup) | Crea una cuenta de usuario en el sistema de usuarios utilizado.|
 | [stop](#function-stop) | Detiene la reproducción de un archivo de audio.|
 | [set](#function-set) | Establece un valor para una referencia.|
+| [track](#function-track) | Registra un evento en la herramienta de analytics.|
 
 
 
@@ -75,6 +81,24 @@ Ejemplo:
 			"age":23
 		}
 	"to":"@firebase.firestore.students"
+}
+</pre>
+
+
+## Function BROWSER
+Abre el navegador web del dispositivo y carga en él una URL.
+
+Estos son sus parámetros:
+
+| Tipo  | Descripción |
+| ------------- | ------------- |
+| url | URL que queremos cargar en el navegador.|
+
+Ejemplo:
+<pre>
+{
+	"function":"browser",
+	"url":"https://codoozer.com"
 }
 </pre>
 
@@ -150,6 +174,26 @@ Ejemplo:
 	"function":"increase",
 	"what":"@property.score",
 	"by":5
+}
+</pre>
+
+
+## Function INTERSTITIAL
+Muestra un anuncio de tipo intersticial a pantalla completa. Consulta la sección de monetización para obtener ayuda sobre cómo configurar las redes de anuncios. El anuncio intersticial se muestra como una transición entre dos pantallas (vistas). En cuanto a flujo de la app, funcionaría como la función GOTO, pero mostrando un anuncio antes de cargar la vista de destino.
+
+Estos son sus parámetros:
+
+| Tipo  | Descripción |
+| ------------- | ------------- |
+| placement | ID del emplazamiento de anuncios.|
+| view | Vista a la que se tiene que ir cuando se cierre el anuncio o cuando no haya anuncio disponible.|
+
+Ejemplo:
+<pre>
+{
+	"function":"interstitial",
+	"placement":"after_game",
+	"view":"menu"
 }
 </pre>
 
@@ -279,6 +323,39 @@ Ejemplo:
 </pre>
 
 
+## Function PURCHASE
+Inicia el flujo para realizar una compra in-app.
+
+Estos son sus parámetros:
+
+| Tipo  | Descripción |
+| ------------- | ------------- |
+| product | ID del producto que se quiere vender.|
+| onowned | Función/es a ejecutar en caso de que el usuario ya haya comprado previamente el producto.|
+| onerror | Función/es a ejecutar en caso de que se produzca algún error en la transacción o el usuario lo cancele.|
+| onsuccess | Función/es a ejecutar en caso de que la compra se realice correctamente.|
+
+Ejemplo:
+<pre>
+{
+	"function":"purchase",
+	"product":"full_version",
+	"onsuccess":{
+		"function":"popup",
+		"dialog":"purchase_ok"
+	},
+	"onowned":{
+		"function":"popup",
+		"dialog":"product_already_owned"
+	},
+	"onerror":{
+		"function":"popup",
+		"dialog":"try_again"
+	}
+}
+</pre>
+
+
 ## Function REDUCE
 Realiza una operación de resta.
 
@@ -295,6 +372,61 @@ Ejemplo:
 	"function":"reduce",
 	"what":"@firebase.firestore.users.(@firebase.user.id).kids.(@property.selectedKid).score",
 	"by":10
+}
+</pre>
+
+
+## Function REWARD
+Lanza un anuncio de vídeo recompensado.
+
+Estos son sus parámetros:
+
+| Tipo  | Descripción |
+| ------------- | ------------- |
+| placement | ID del emplazamiento de anuncio.|
+| source | Identificador de la variable donde se debe guardar la recompensa recibida.|
+| onreward | Función/es a ejecutar en caso de que el usuario obtenga la recompensa correctamente.|
+| ondismiss | Función/es a ejecutar en caso de que el usuario cierre el anuncio antes de ganar la recompensa.|
+| onnotready | Función/es a ejecutar en caso de que no haya ningún anuncio disponible.|
+
+Ejemplo:
+<pre>
+{
+	"function":"reward",
+	"placement":"earn_gold",
+	"source":"@property.currentReward",
+	"onreward":{
+		"function":"popup",
+		"dialog":"gotreward"
+	},
+	"ondismiss":{
+		"function":"popup",
+		"dialog":"try_again"
+	},
+	"onnotready":{
+		"function":"popup",
+		"dialog":"ad_not_ready"
+	}
+}
+</pre>
+
+
+## Function ROUND
+Redondea un número.
+
+Estos son sus parámetros:
+
+| Tipo  | Descripción |
+| ------------- | ------------- |
+| what | Referencia cuyo valor queremos redondear.|
+| decimals | Número de decimales a los que queremos redondear.|
+
+Ejemplo:
+<pre>
+{
+	"function":"round",
+	"what":"@property.score",
+	"decimals":2
 }
 </pre>
 
@@ -378,3 +510,25 @@ Ejemplo:
 }
 </pre>
 
+
+## Function TRACK
+Registra un evento en la herramienta de Analytics.
+
+Estos son sus parámetros:
+
+| Tipo  | Descripción |
+| ------------- | ------------- |
+| name | Nombre del evento.|
+| params | Objeto JSON con los parámetros del evento.|
+
+Ejemplo:
+<pre>
+{
+	"function":"track",
+	"name":"exam_complete",
+	"params":{
+		"result":10,
+		"examID":123
+	}
+}
+</pre>
