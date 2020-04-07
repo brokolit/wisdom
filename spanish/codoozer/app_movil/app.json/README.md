@@ -88,7 +88,7 @@ El parámetro `monetization` especifica la configuración de la monetización. L
 Admob:
 
   | Key  | Valor |
-  | ------------- | ------------- | ------------- | ------------- | ------------- | ------------- |
+  | ------------- | ------------- |
   | id | "admob" | 
   | android_app_id | ID de la app asignado por Admob | 
   | android_test_devices | Una cadena de texto que contiene el token del dispositivo de testeo, o un array de cadenas si se quiere añadir varios dispositivos de testeo. |
