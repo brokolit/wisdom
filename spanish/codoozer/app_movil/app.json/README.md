@@ -77,23 +77,51 @@ Más adelante se definirán otros eventos, como el `onexit`, `onpush`, etc.
 El parámetro `monetization` especifica la configuración de la monetización. La siguiente tabla muestra la estructura del objeto JSON:
 
 
-  | Key  |||||
-  | ------------- | ------------- | ------------- | ------------- | ------------- |
-  | android | ads | admob | app_id | valor del App ID ofrecido por admob |
-  |  |  |  | banner_id | id de código de anuncios para formato banner |
+  | Key  ||||
+  | ------------- | ------------- | ------------- | ------------- |
+  | android | ads | networks | Array que contiene objetos, cada cual correspondiente a la configuración de una red publicitaria. |
+  | android | ads | placements | Array que contiene objetos con información sobre los espacios de la app donde puede aparecer publicidad |
 
+Las redes (networks) pueden ser:
+
+Admob
+
+  | Key  | Valor |
+  | ------------- | ------------- | ------------- | ------------- | ------------- | ------------- |
+  | id | "admob" | 
+  | android_app_id | ID de la app asignado por Admob | 
+  | android_test_devices | Una cadena de texto que contiene el token del dispositivo de testeo, o un array de cadenas si se quiere añadir varios dispositivos de testeo. |
+  
 
 A continuación se muestra un ejemplo:
 <pre>
     "monetization":{
-        "android":{
-            "ads":{
+        "ads":{
+            "networks":{
                 "admob":{
-                    "app_id":"ca-app-pub-5xxxx85829042252~70xxxxxxxx",
-                    "banner_id":"ca-app-pub-5xxxx85829042252/62xxxxxxxx"
+                    "android_app_id":"ca-app-pub-3940256099942544~3xxxxxxxx",
+                    "android_test_devices": "26F2006560892_1D83871216xxxxxxxx"
+                }
+            },
+            "placements":{
+                "banner_menu":{
+                    "network":"admob",
+                    "format":"banner",
+                    "android_unit_id":"ca-app-pub-4520545808487978/58xxxxxxxx"
+                },
+                "after_result":{
+                    "network":"admob",
+                    "format":"interstitial",
+                    "android_unit_id":"ca-app-pub-4520545808487978/12xxxxxxxx"
+                },
+                "earn_questions":{
+                    "network":"admob",
+                    "format":"rewarded",
+                    "android_unit_id":"ca-app-pub-4520545808487978/10xxxxxxxx"
                 }
             }
         }
+        
     }
 </pre>
 
