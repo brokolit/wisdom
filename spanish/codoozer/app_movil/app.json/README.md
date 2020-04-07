@@ -17,6 +17,7 @@ La siguiente tabla muestra los parámetros que puede contener:
   | [monetization](#monetización) | Opcional | Contiene la configuración necesaria para activar la monetización por publicidad |
   | [purchases](#compras-inapp) | Opcional | Contiene la configuración necesaria para vender productos dentro de la app |
   | [colors](#colores) | Opcional | Contiene una tabla de colores, para poder referenciarlos desde partes de la app, con el objetivo de poder cambiar todo el aspecto de la app desde un mismo sitio. |
+  | [database](#bases-de-datos) | Opcional | Contiene la lista de bases de datos, si las hubiere, que se van a utilizar en la app. |
   | [fonts](#tipografías-fonts) | Opcional | Contiene una tabla de fuentes TTF, en caso de que se quieran utilizar en la app.|
 
 
@@ -85,11 +86,16 @@ El parámetro `monetization` especifica la configuración de la monetización. L
 
 ### Redes publicitarias (networks):
 
-Admob:
+El parámetro `networks` tiene como valor un objeto JSON con la siguiente estructura:
+
+  | Key  | Caracter | Valor |
+  | ------------- | ------------- | ------------- |
+  | admob | Opcional | Objeto JSON que contiene la configuración de la red publicitaria Admob | 
+
+El parámetro Admob, tiene la siguiente estructura:
 
   | Key  | Valor |
   | ------------- | ------------- |
-  | id | "admob" | 
   | android_app_id | ID de la app asignado por Admob | 
   | android_test_devices | Una cadena de texto que contiene el token del dispositivo de testeo, o un array de cadenas si se quiere añadir varios dispositivos de testeo. |
   
@@ -187,6 +193,9 @@ A continuación se puede ver un ejemplo:
         "black": "#000000"
     }
 </pre>
+
+
+## Bases-de-datos
 
 
 ## Tipografías (fonts)
