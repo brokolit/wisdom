@@ -157,14 +157,14 @@ El parámetro `purchases` especifica la configuración de las ventas in-app. La 
 ### Compras vía GooglePlay
 El parámetro `googleplay` del objeto `purchases` tiene la siguiente estructura JSON:
 
-  | Key  | |
+  | Key  | Descripción |
   | ------------- | ------------- |
   | products | Un array JSON que contiene la lista de productos a vender en la app |
   
   
 Cada producto tiene a su vez la siguiente estructura JSON:
 
-  | Key  | |
+  | Key  | Descripción |
   | ------------- | ------------- |
   | id | Identificador del producto tal y como se ha definido en la consola de desarrollador de GooglePlay |
   | type | Indica el tipo de producto. Actualmente solo permite usar productos de tipo `eternal`, que son los que solo se necesita comprar una vez. |
@@ -195,8 +195,15 @@ A continuación se puede ver un ejemplo:
 </pre>
 
 
-## Bases-de-datos
+## Bases de datos
+El valor del parámetro `database` es un array JSON que contiene un objeto por cada base de datos que tenga la app.
 
+  | Key  | Caracter | Descripción |
+  | ------------- | ------------- | ------------- |
+  | id | Obligatorio | Identificador de la base de datos |
+  | source | Obligatorio | Ruta al archivo que contiene la base de datos, relativa a la carpeta `res` o una URL |
+  | type | Obligatorio | Tipo de base de datos. Puede ser uno de estos valores: `csv` |
+  
 
 ## Tipografías (fonts)
 El valor del parámetro `fonts` es un objeto JSON que contiene una lista de parámetros clave-valor, cada uno representando a una tipografía. La clave será el identificador que se quiera asignar a la tipografía, mediante el cual se hará referencia desde otras partes de la app, y el valor será el nombre del archivo que contiene la fuente, alojado en la subcarpeta `fonts`, que está dentro de `res`.
