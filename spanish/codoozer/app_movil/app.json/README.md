@@ -15,6 +15,7 @@ La siguiente tabla muestra los parámetros que puede contener:
   | [ios](#configuración-ios) | Opcional | Contiene configuración específica para generar la versión compatible con dispositivos iOS (Apple). Por tanto, solo es necesario en caso de que se desee generar dicha versión. |
   | [events](#eventos-de-la-app) | Obligatorio | Define el comportamiento de la app como respuesta a determinados eventos. Debe contener, como mínimo, el evento `onstart`, en el que definiremos qué debe hacer la app al ejecutarse. Por ejemplo, la función `goto` para cargar una vista. |
   | [monetization](#monetización) | Opcional | Contiene la configuración necesaria para activar la monetización por publicidad |
+  | [purchases](#compras-inapp) | Opcional | Contiene la configuración necesaria para vender productos dentro de la app |
   | [colors](#colores) | Opcional | Contiene una tabla de colores, para poder referenciarlos desde partes de la app, con el objetivo de poder cambiar todo el aspecto de la app desde un mismo sitio. |
   | [fonts](#tipografías-fonts) | Opcional | Contiene una tabla de fuentes TTF, en caso de que se quieran utilizar en la app.|
 
@@ -82,9 +83,9 @@ El parámetro `monetization` especifica la configuración de la monetización. L
   | android | ads | networks | Array que contiene objetos, cada cual correspondiente a la configuración de una red publicitaria. |
   | android | ads | placements | Array que contiene objetos con información sobre los espacios de la app donde puede aparecer publicidad |
 
-Las redes (networks) pueden ser:
+### Redes publicitarias (networks):
 
-Admob
+Admob:
 
   | Key  | Valor |
   | ------------- | ------------- | ------------- | ------------- | ------------- | ------------- |
@@ -92,6 +93,18 @@ Admob
   | android_app_id | ID de la app asignado por Admob | 
   | android_test_devices | Una cadena de texto que contiene el token del dispositivo de testeo, o un array de cadenas si se quiere añadir varios dispositivos de testeo. |
   
+  
+### Emplazamientos (placements):
+
+Cada objeto `placement` contiene información sobre un emplazamiento publicitario, pudiendo tener estos valores:
+
+  | Key  | Valor |
+  | ------------- | ------------- |
+  | id | Nombre del emplazamiento, para referirse a él desde otras partes de la app. | 
+  | network  | Red publicitaria usada por este emplazamiento. |
+  | format  | Indica el tipo de anuncio. Puede ser `banner`, `interstitial` o `rewarded`. |
+  | android_unit_id  | Es el ID de la unidad publicitaria ofrecido por la red para Android. |
+  | ios_unit_id  | Es el ID de la unidad publicitaria ofrecido por la red para iOS. |
 
 A continuación se muestra un ejemplo:
 <pre>
@@ -126,7 +139,32 @@ A continuación se muestra un ejemplo:
 </pre>
 
 
+## Compras in-app
+El parámetro `purchases` especifica la configuración de las ventas in-app. La siguiente tabla muestra la estructura del objeto JSON:
 
+
+  | Key  | Caracter ||
+  | ------------- | ------------- | ------------- |
+  | googleplay | Opcional | Objeto JSON con la información para configurar las compras a través de GooglePlay |
+
+
+### Compras vía GooglePlay
+El parámetro `googleplay` del objeto `purchases` tiene la siguiente estructura JSON:
+
+  | Key  | |
+  | ------------- | ------------- |
+  | products | Un array JSON que contiene la lista de productos a vender en la app |
+  
+  
+Cada producto tiene a su vez la siguiente estructura JSON:
+
+  | Key  | |
+  | ------------- | ------------- |
+  | id | Identificador del producto tal y como se ha definido en la consola de desarrollador de GooglePlay |
+  | type | Indica el tipo de producto. Actualmente solo permite usar productos de tipo `eternal`, que son los que solo se necesita comprar una vez. |
+
+
+  
 ## Colores
 El valor del parámetro `colors` es un objeto JSON que contiene una lista de parámetros clave-valor, cada uno representando a un color. La clave será el identificador que se quiera asignar al color, mediante el cual se hará referencia desde otras partes de la app, y el valor será el código hexadecimal del color, precedido por almohadilla (#), y en formato #RRGGBB o #AARRGGBB.
 
