@@ -13,7 +13,7 @@ En esta tabla se muestran los parámetros que puede tener:
   | id | Obligatorio | Identificador único |
   | [actionbar](#actionbar) | Opcional | Hay que añadirlo si se quiere que el view_wrapper tenga un ActionBar. El valor es un objeto JSON que define las propiedades de dicha barra |
   | [drawer](#drawer) | Opcional | Hay que añadirlo si se quiere que el view_wrapper tenga un panel lateral deslizante. El valor es un objeto JSON que define las propiedades de dicho panel. |
-  | pager | Opcional | Hay que añadirlo si se quiere que el view_wrapper tenga un paginardor, pudiendo albergar varias vistas. El valor es una array que contiene los IDs de las vistas que se quieren incluir. |
+  | [pager](#pager) | Opcional | Hay que añadirlo si se quiere que el view_wrapper tenga un paginardor, pudiendo albergar varias vistas. El valor es una array que contiene los IDs de las vistas que se quieren incluir. |
   
 Si no se añade ningún componente, el contenedor de vistas será un entorno a pantalla completa.
 
