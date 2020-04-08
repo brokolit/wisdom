@@ -43,7 +43,7 @@ Un Drawer es un panel lateral que aparece al hacer swipe desde el borde lateral 
   | icon | Nombre del archivo que contiene el icono |
   | title | Título a mostrar en la cabecera del panel. Acepta multilenguaje |
   | subtitle | Subtítulo a mostrar en la cabecera del panel. Acepta multilenguaje |
-  | menu | Título a mostrar en la cabecera del panel. Acepta multilenguaje |
+  | menu | ID del menú a utilizar |
   
   
   
