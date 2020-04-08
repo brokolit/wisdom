@@ -25,8 +25,11 @@ Un ActionBar es una barra superior que se muestra en la pantalla y puede contene
   | Key  | Descripción |
   | ------------- | ------------- |
   | back_button | Indica si la barra debe mostrar un botón de volver a la izquierda del título |
+  | background_color | Indica el color de fondo de la barra. Puede ser un valor absoluto, en formato #RGB o #ARGB, o una referencia a un color predefinido |
+  | color | Indica el color del título y de los botones |
   | title | Título a mostrar en la barra. Acepta multilenguaje |
   | menu | Es el ID del menú definido en la carpeta `menus` que queremos añadir a la barra. Las opciones del menú se pueden mostrar como iconos de acción o aparecer dentro de un menú emergente, en función de como se defina en el JSON del menú correspondiente. |
+  | ios_type | Este parámetro solo se utiliza en las apps de iOS. Indica el tipo de barra, si es comprimida (`inline`) o grande (`large`)  |
   
   
 
@@ -41,6 +44,16 @@ Un Drawer es un panel lateral que aparece al hacer swipe desde el borde lateral 
   | title | Título a mostrar en la cabecera del panel. Acepta multilenguaje |
   | subtitle | Subtítulo a mostrar en la cabecera del panel. Acepta multilenguaje |
   | menu | Título a mostrar en la cabecera del panel. Acepta multilenguaje |
+  
+  
+  
+  ## Pager
+Un Pager (paginador) se utiliza para cargar varias `view` y poder navegar entre ellas mediante scroll horizontal. 
+  
+  | Key  | Descripción |
+  | ------------- | ------------- |
+  | tabs | Indica si hay que incluir las pestañas de navegación para cambiar de una vista a otra. Puede ser `true` o `false`. De no existir el parámetro, se considera valor `false`. |
+  | views | Contiene la lista de vistas que debe content el paginador. Es un array de cadenas de texto, cada cual es el ID de una vista. |
   
   
   
