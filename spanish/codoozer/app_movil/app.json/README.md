@@ -92,7 +92,7 @@ El parámetro `networks` tiene como valor un objeto JSON con la siguiente estruc
   | ------------- | ------------- | ------------- |
   | admob | Opcional | Objeto JSON que contiene la configuración de la red publicitaria Admob | 
 
-El parámetro Admob, tiene la siguiente estructura:
+El valor del parámetro `admob` es un objeto JSON que tiene la siguiente estructura:
 
   | Key  | Valor |
   | ------------- | ------------- |
