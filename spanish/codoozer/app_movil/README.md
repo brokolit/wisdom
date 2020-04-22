@@ -11,7 +11,6 @@ Para crear una app móvil nativa, nuestro proyecto debe contener la siguiente es
 [app.json](app.json)  
 ├── [certificates (opcional)](certificates)  
 ├── [dialogs (opcional)](dialogs)  
-├── [dialogs (opcional)](dialogs)  
 ├── [external (opcional)](external)  
 ├── [menus (opcional)](menus)  
 ├── [res](res)  
