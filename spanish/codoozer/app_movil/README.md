@@ -21,6 +21,7 @@ Para crear una app móvil nativa, nuestro proyecto debe contener la siguiente es
 └── [views](views)  
 
 
+
 ### Funciones
 
 Las funciones son las acciones que queremos que la app realice, como repuesta a un evento (se inicia la app, el usuario toca algo en la pantalla, se va a cargar una pantalla nueva, se ha cargado la pantalla actual, etc.).
