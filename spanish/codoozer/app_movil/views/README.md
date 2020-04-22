@@ -37,7 +37,7 @@ Estos son los eventos disponibles:
   | ------------- | ------------- |
   | onloaded | Se produce una vez la vista ha sido cargado |
   | onpreload | Se produce justo antes de cargarse la vista. En caso de ejecutarse algunos tipos de funciones, como la función `goto`, se podría interrumpir la carga de la vista actual.  |
-
+  | onexit | Se produce justo antes abandonar la vista. |
 
 Aquí se puede ver un ejemplo:
 
