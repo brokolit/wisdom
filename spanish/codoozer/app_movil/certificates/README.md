@@ -1,5 +1,5 @@
-# Carpeta menus
+# Carpeta certificates
 
-Esta carpeta solo es necesaria si tenemos previsto incluir menús nativos dentro de nuestra app. Estos son los menús que se utilizan, por ejemplo, en las barras ActionBar, paneles laterales, componentes tipo `list`, etc.
+Esta carpeta solo es necesaria si quieres firmar las aplicaciones con certificados específicos. Por ejemplo, si quieres hacer con codoozer una app que ya tenías publicada en GooglePlay, necesitarás utilizar el mismo certificado que ya usaste. Si no quieres crear usar un certificado específico, Codoozer generará certificados aleatorios propios de cada app.
 
-En cambio, si lo que se pretende es que los menús de la app se compongan de componentes gráficos (imágenes, textos con enlaces, etc.), no será necesario crear esta carpeta.
+Para Android, puedes aportar un archivo de almacén de claves (keystore), que podrás generar con la aplicación Keytool que viene incluída en las distribuciones de Java.
