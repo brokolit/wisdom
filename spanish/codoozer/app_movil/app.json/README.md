@@ -35,9 +35,19 @@ El parámetro `android` contiene algunas configuraciones necesarias para poder c
   | package_name | Obligatorio | Nombre del paquete Android de la app. Debe ser un identificador único de la app, no pudiendo publicarse en los AppStores si ya existiera otro con el mismo nombre de paquete Android. |
   | version | Obligatorio | El número de versión que queremos compilar. Debe ser un número entero y deberíamos aumentar el valor cada vez que queramos actualizar la app en GooglePlay. |
   | version_name | Opcional | Es una cadena de texto que contiene tres números concatenados por puntos, indicando el número de versión, y subversión. De no introducirse, se cogerá el número de versión y se le añadirán dos ceros (1.0.0) |
+  | certificate | Opcional | Es un objeto JSON que contine la información sobre el certificado para firmar la aplicación. |
   | maps_api_key | Opcional | Se deberá introducir en el caso de que queramos utilizar mapas de google dentro de la app. En este [enlace](https://developers.google.com/maps/documentation/android-sdk/get-api-key) se puede obtener información sobre cómo obtener el API key.|
   | firebase | Opcional | Se deberá introducir en el caso de que queramos utilizar algún producto de Firebase, como las notificaciones push, analytics, etc. El valor de este parámetro será un objeto JSON que definirá qué productos de Firebase se quiere utilizar. Más abajo se explican estos parámetros.|
   
+
+La siguiente tabla muestra los parámetros que acepta el valor del parámetro `certificate`. Si no añades ningún certificado de firma, Codoozer generará uno por ti.
+
+  | Key  | Descripción |
+  | ------------- | ------------- |
+  | file | Nombre del archivo `keystore` dentro de la carpeta `certificates`. |
+  | store_password | Contraseña del almacén de claves. |
+  | key_alias | El alias de la clave del almacén de claves que quieres usar para firmar la app. |
+  | key_password | Contraseña de la clave correspondiente al alias elegido.|
 
 La siguiente tabla muestra los parámetros que acepta el valor del parámetro `firebase`. Para activar un producto, basta con incluir la clave correspondiente y asignarle valor `true`:
 
