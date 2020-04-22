@@ -9,6 +9,7 @@ Como alternativa, podríamos definir módulos específicos para cada plataforma,
 Para crear una app móvil nativa, nuestro proyecto debe contener la siguiente estructura
 
 [app.json](app.json)  
+├── [certificates (opcional)](certificates)
 ├── [dialogs (opcional)](dialogs)  
 ├── [external (opcional)](external)  
 ├── [menus (opcional)](menus)  
