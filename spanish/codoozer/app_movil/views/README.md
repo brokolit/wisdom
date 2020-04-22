@@ -100,8 +100,10 @@ Los condicionales se utilizan para especificar si la aparición de un componente
   | Key  | Caracter | Descripción |
   | ------------- | ------------- | ------------- |
   | what | Obligatorio | Referencia que queremos evaluar |
-  | is | Opcional | Valor o refencia con cuyo valor queremos comparar. La condición se cumplirá si el valor de `what` es igual al valor especificado en `is`.|
-  | is_not | Opcional | Valor o refencia con cuyo valor queremos comparar. La condición se cumplirá si el valor de `what` es distinta al valor especificado en `is_not`.|
+  | is | Opcional | Valor o referencia con cuyo valor queremos comparar. La condición se cumplirá si el valor de `what` es igual al valor especificado en `is`.|
+  | is_not | Opcional | Valor o referencia con cuyo valor queremos comparar. La condición se cumplirá si el valor de `what` es distinta al valor especificado en `is_not`.|
+  | less_than | Opcional | Valor o referencia con cuyo valor queremos comparar. La condición se cumplirá si el valor de `what` es menor al especificado en `less_than`.|
+  | more_than | Opcional | Valor o referencia con cuyo valor queremos comparar. La condición se cumplirá si el valor de `what` es mayor al especificado en `less_than`.|
   
   
 
