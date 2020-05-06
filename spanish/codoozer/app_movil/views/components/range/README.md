@@ -20,6 +20,6 @@ La siguiente tabla muestra los parámetros que puede contener, además de los pa
 El componente `range` admite los siguientes eventos:
 
  | Evento  | Descripción |
-  | ------------- | ------------- | ------------- |
+  | ------------- | ------------- |
   | onchanged | Se produce cuando el usuario mueve el cursor y el componente cambia de valor. Hay que tener en cuenta que este evento no se invocará si el componente cambia de valor por el hecho de que la referencia en el parámetro `source` haya cambiado de valor. |
 
