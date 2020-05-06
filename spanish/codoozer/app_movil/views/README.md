@@ -83,6 +83,7 @@ Los parámetros comunes son:
   | [padding](#márgenes-y-padding) | Opcional | 0 | Define los márgenes internos que hay que dejar entre los límites del componente y su contenido.|
   | valign | Opcional | middle | Alineamiento vertical del componente con respecto a su contenedor. Puede ser `top`, `middle` o `bottom`.|
   | width | Opcional | fill | Ancho del elemento. Puede tener los valores `fill`, `wrap`, un número de puntos de densidad (dp), o un porcentaje. |
+  | visible | Opcional | true | Indica si un componente debe mostrarse en pantalla o no. |
   
   
 ## Background
