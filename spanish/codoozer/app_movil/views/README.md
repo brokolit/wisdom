@@ -63,7 +63,7 @@ Los componentes que se pueden incluir son:
 | list | Lista o rejilla |
 | map | Mapa de GoogleMaps |
 | pdfviewer | Visor de archivos pdf |
-| range | Selector con barra de desplazamiento |
+| [range](components/range) | Selector con barra de desplazamiento |
 | switch | Conmutador on/off |
 | text | Para mostrar un texto |
 | web | Para mostrar una página web incrustada |
