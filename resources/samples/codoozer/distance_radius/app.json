@@ -1,0 +1,198 @@
+{
+    "id": 6,
+    "project_name": "distance_radius",
+    "name": {
+        "default": "Distance Radius",
+        "es": "Radio de distancia"
+    },
+    "android": {
+        "package_name": "com.codoozer.test.distance.radius",
+        "version": 2,
+        "version_name": "1.0.1",
+        "maps_api_key":"[your_API_key]"
+    },
+    "events": {
+        "onstart": [
+            {
+                "function":"set",
+                "what":"@cookie.units",
+                "value":"Km",
+                "if":{
+                    "what":"@cookie.units",
+                    "is":null
+                }
+            },
+            {
+                "function":"set",
+                "what":"@cookie.rangeValue",
+                "value":1,
+                "if":{
+                    "what":"@cookie.radius",
+                    "is":null
+                }
+            },
+            {
+                "function":"set",
+                "what":"@cookie.radius",
+                "value":1,
+                "if":{
+                    "what":"@cookie.radius",
+                    "is":null
+                }
+            },
+            {
+                "function":"set",
+                "what":"@cookie.factor",
+                "value":1000,
+                "if":{
+                    "what":"@cookie.units",
+                    "is":"Km"
+                }
+            },
+            {
+                "function":"set",
+                "what":"@cookie.factor",
+                "value":1,
+                "if":{
+                    "what":"@cookie.units",
+                    "is":"m."
+                }
+            },
+            {
+                "function":"set",
+                "what":"@cookie.factor",
+                "value":0.3048,
+                "if":{
+                    "what":"@cookie.units",
+                    "is":"ft."
+                }
+            },
+            {
+                "function":"set",
+                "what":"@cookie.factor",
+                "value":1609.34,
+                "if":{
+                    "what":"@cookie.units",
+                    "is":"mi."
+                }
+            },
+            {
+                "function":"set",
+                "what":"@cookie.factor",
+                "value":1852,
+                "if":{
+                    "what":"@cookie.units",
+                    "is":"nm"
+                }
+            },
+            {
+                "function":"set",
+                "what":"@property.startPosition",
+                "value":"@cookie.currentPosition"
+            },
+            {
+                "function":"set",
+                "what":"@property.startZoom",
+                "value":"@cookie.currentZoom"
+            },
+            {
+                "function":"set",
+                "what":"@database.geos.0.lat",
+                "value":"@cookie.circleLat",
+                "if":{
+                    "what":"@cookie.circleLat",
+                    "is_not":null
+                }
+            },
+            {
+                "function":"set",
+                "what":"@database.geos.0.lng",
+                "value":"@cookie.circleLng",
+                "if":{
+                    "what":"@cookie.circleLng",
+                    "is_not":null
+                }
+            },
+            {
+                "function":"set",
+                "what":"@database.geos.1.lat",
+                "value":"@cookie.circleLat",
+                "if":{
+                    "what":"@cookie.circleLat",
+                    "is_not":null
+                }
+            },
+            {
+                "function":"set",
+                "what":"@database.geos.1.lng",
+                "value":"@cookie.circleLng",
+                "if":{
+                    "what":"@cookie.circleLng",
+                    "is_not":null
+                }
+            },
+            {
+                "function": "goto",
+                "view": "main"
+            }
+        ]
+    },
+    "monetization":{
+        "ads":{
+            "networks":{
+                "admob":{
+                    "android_app_id":"ca-app-pub-5671085829042252~2861251572",
+                    "android_test_devices": "7B9E44CC2F4964493D70EB9C49797359"
+                }
+            },
+            "placements":[
+                {
+                    "id":"banner_main",
+                    "network":"admob",
+                    "format":"banner",
+                    "android_unit_id":"ca-app-pub-5671085829042252/1356598212"
+                }
+            ]
+        }
+        
+    },
+    "colors": {
+        "primary": "#ff7043",
+        "primaryDark": "#c63f17",
+        "primaryLight": "#ffa270",
+        "colorAccent": "#000a12",
+        "secondary": "#8d6e63",
+        "secondaryDark": "#5f4339",
+        "secondaryLight": "#be9c91",
+        "blue": "#0cafe8",
+        "bluegrey": "#d7d4e3",
+        "grey": "#999999",
+        "darkblue": "#01579b",
+        "fbutton": "#01579b",
+        "white": "#ffffff",
+        "black": "#000000",
+        "bronze": "#FFC800",
+        "lighten": "#C8FFFFFF",
+        "correct": "#90DEAA",
+        "wrong":"#FF9494",
+        "back":"#FAFAFA",
+        "settingsBarTextColor":"#5f4339",
+        "settingsBarColor":"#ff7043",
+        "unitsButtonTextColor":"#be9c91",
+        "unitsButtonColor":"#c63f17",
+        "unitsMenuBackground":"#FFFFFF",
+        "unitsMenuColor":"#FFC800",
+        "radiusFieldBorder":"#c63f17"
+    },
+    "fonts": {
+        "renner":"Renner.ttf"
+    },
+    "databases":[
+        {
+            "id":"geos",
+            "source":"geofences.json",
+            "type":"json"
+        }
+    ]
+}
+

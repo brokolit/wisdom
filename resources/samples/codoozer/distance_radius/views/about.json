@@ -1,0 +1,129 @@
+{
+    "object": "view",
+    "id": "about",
+    "title": {
+        "default": "Acerca de..."
+    },
+    "wrapper": "abouts",
+    "orientation": "vertical",
+    "content": [
+        {
+            "id": "aboutScroll",
+            "type": "group",
+            "scroll": true,
+            "width": "100%",
+            "height": "100%",
+            "content": [
+                {
+                    "id": "groupVersion",
+                    "type": "group",
+                    "orientation": "horizontal",
+                    "width": "90%",
+                    "height": "wrap",
+                    "halign": "center",
+                    "margin": {
+                        "top": "10dp"
+                    },
+                    "content": [
+                        {
+                            "id": "app_version_label",
+                            "type": "text",
+                            "width": "wrap",
+                            "height": "wrap",
+                            "valign": "top",
+                            "halign": "start",
+                            "size": "18dp",
+                            "text": {
+                                "default": "Versión "
+                            }
+                        }
+                        , {
+                            "id": "app_version_name",
+                            "type": "text",
+                            "width": "wrap",
+                            "height": "wrap",
+                            "valign": "top",
+                            "halign": "start",
+                            "size": "18dp",
+                            "source": "@app.version",
+                            "margin": {
+                                "start": 10
+                            }
+                        }
+                    ]
+                },
+
+                {
+                    "id": "app_info",
+                    "type": "text",
+                    "width": "90%",
+                    "halign": "center",
+                    "valign": "top",
+                    "height": "wrap",
+                    "size": "24dp",
+                    "margin": {
+                        "top": "10dp"
+                    },
+                    "text": {
+                        "default": "Todas las preguntas de esta app se han obtenido de fuentes oficiales (páginas web) de los distintos organismos y administraciones públicas."
+                    }
+                },
+                {
+                    "id": "app_info_2",
+                    "type": "text",
+                    "width": "90%",
+                    "height": "wrap",
+                    "valign": "top",
+                    "halign": "center",
+                    "size": "24dp",
+                    "margin": {
+                        "top": "10dp"
+                    },
+                    "text": {
+                        "default": "Podría darse el caso que por error de transcripción, haya algún error en la elección de alguna respuesta correcta. En caso de detectarlo, por favor contacta con nosotros y lo revisaremos."
+                    },
+                    "margin": {
+                        "top": 36
+                    }
+                },
+                {
+                    "id": "app_info_user_label",
+                    "type": "text",
+                    "width": "90%",
+                    "height": "wrap",
+                    "valign": "top",
+                    "halign": "center",
+                    "size": "18dp",
+                    "margin": {
+                        "top": "10dp"
+                    },
+                    "text": {
+                        "default": "Tu identificador de usuario es:"
+                    },
+                    "margin": {
+                        "top": 36
+                    }
+                }
+                , {
+                    "id": "app_info_user_id",
+                    "type": "text",
+                    "width": "90%",
+                    "height": "wrap",
+                    "valign": "top",
+                    "halign": "center",
+                    "size": "18dp",
+                    "selectable": true,
+                    "margin": {
+                        "top": "10dp",
+                        "bottom":"10dp"
+                    },
+                    "text": {
+                        "default": "abcdefg"
+                    },
+                    "source": "@firebase.fcm.token"
+                }
+            ]
+        }
+    ]
+}
+

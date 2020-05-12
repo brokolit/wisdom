@@ -1,0 +1,21 @@
+[
+	{
+		"id":"selection",
+		"type":"circle",
+		"radius":1000,
+	    "stroke_width":6,
+	    "stroke_color":"#E67A00",
+	    "color":"#2823A868"
+	},
+	{
+		"id":"center",
+		"type":"marker",
+		"lat":39.545076,
+	    "lng":-0.414160,
+	    "icon":"mark.png",
+        "rotation": 0,
+        "anchor_h": 0.5,
+        "anchor_v": 1
+
+	}
+]

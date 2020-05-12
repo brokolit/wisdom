@@ -1,0 +1,11 @@
+{
+    "id": "abouts",
+    "actionbar": {
+        "back_button": true,
+        "color": "@color.white",
+        "background_color": "@color.primary",
+        "title": {
+            "default": "Inicio"
+        }
+    }
+}

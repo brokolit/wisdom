@@ -1,0 +1,24 @@
+{
+    "id": "main",
+    "actionbar": {
+        "back_button": false,
+        "color": "@color.white",
+        "background_color": "@color.primary",
+        "title": {
+            "default": "Inicio"
+        }
+    },
+    "drawer": {
+        "icon": "icon_header.png",
+        "title": {
+            "default": "Distance Radius",
+            "es": "Radio de distancia"
+        },
+        "menu": "main_drawer",
+        "subtitle": {
+            "default": "How far can you get?",
+            "es": "¿Hasta dónde puedes llegar?"
+        }
+    }
+}
+

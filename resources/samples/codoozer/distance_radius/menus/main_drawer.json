@@ -1,0 +1,27 @@
+{
+    "id": "main_drawer",
+    "items": [
+        
+        {
+            "id": "info",
+            "type": "submenu",
+            "title": {
+                "default": "Información"
+            },
+            "items": [
+                {
+                    "id": "daction_about",
+                    "type": "item",
+                    "icon": "ic_info.png",
+                    "title": {
+                        "default": "Acerca de..."
+                    },
+                    "onclick": {
+                        "function": "goto",
+                        "view": "about"
+                    }
+                }
+            ]
+        }
+    ]
+}
