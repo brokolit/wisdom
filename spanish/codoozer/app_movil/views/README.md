@@ -58,7 +58,7 @@ Los componentes que se pueden incluir son:
 | banner | Banner de publicidad |
 | button | Botón |
 | group | Grupo que permite incluir dentro otros componentes |
-| image | Imagen |
+| [image](components/image) | Imagen |
 | inputtext | Campo de entrada de texto |
 | list | Lista o rejilla |
 | map | Mapa de GoogleMaps |
