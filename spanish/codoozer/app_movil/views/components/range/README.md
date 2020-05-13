@@ -7,8 +7,9 @@ La siguiente tabla muestra los parámetros que puede contener, además de los pa
 
   | Key  | Caracter | Descripción |
   | ------------- | ------------- | ------------- |
-  | start | Opcional | Es el valor mínimo del rango, que equivale a que el cursor esté totalmente al principio de la barra. De no incluir este parámetro, se considera que el valor mínimo es cero. |
-  | steps | Opcional | Es el número de posiciones que puede ocupar el cursor a través de la barra horizontal. Si no se incluye este parámetro, el número de posiciones es 100. |
+  | field | Opcional | En caso de que el componente esté dentro de una lista, el parámetro field indica el campo de la colección asociada a la lista que contendrá el valor inicial del componente. |
+  | min | Opcional | Es el valor mínimo del rango, que equivale a que el cursor esté totalmente al principio de la barra. De no incluir este parámetro, se considera que el valor mínimo es cero. |
+  | max | Opcional | Es el valor máximo del rango, que equivale a que el cursor esté totalmente al final de la barra. De no incluir este parámetro, se considera que el valor máximo es 100. |
   | step | Opcional | Indica el incremento en el valor final por cada posición que se mueva el cursor hacia la derecha. Si no se especifica este parámetro, toma el valor 1. |
   | value | Opcional | Se utiliza para definir el valor inicial del selector `range`.|
   | source | Opcional | Si queremos vincular el valor del selector a una referencia, de modo que cuando el usuario cambie el cursor de posición, se actualice el valor de dicha referencia. O, por el contrario, si se cambia el valor de la referencia, que se actualice la posición del cursor en el componente. |
