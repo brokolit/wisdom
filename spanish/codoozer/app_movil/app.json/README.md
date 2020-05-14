@@ -17,7 +17,7 @@ La siguiente tabla muestra los parámetros que puede contener:
   | [monetization](#monetización) | Opcional | Contiene la configuración necesaria para activar la monetización por publicidad |
   | [purchases](#compras-inapp) | Opcional | Contiene la configuración necesaria para vender productos dentro de la app |
   | [colors](#colores) | Opcional | Contiene una tabla de colores, para poder referenciarlos desde partes de la app, con el objetivo de poder cambiar todo el aspecto de la app desde un mismo sitio. |
-  | [database](#bases-de-datos) | Opcional | Contiene la lista de bases de datos, si las hubiere, que se van a utilizar en la app. |
+  | [databases](#bases-de-datos) | Opcional | Contiene la lista de bases de datos, si las hubiere, que se van a utilizar en la app. |
   | [fonts](#tipografías-fonts) | Opcional | Contiene una tabla de fuentes TTF, en caso de que se quieran utilizar en la app.|
 
 
@@ -206,7 +206,7 @@ A continuación se puede ver un ejemplo:
 
 
 ## Bases de datos
-El valor del parámetro `database` es un array JSON que contiene un objeto por cada base de datos que tenga la app.
+El valor del parámetro `databases` es un array JSON que contiene un objeto por cada base de datos que tenga la app.
 
   | Key  | Caracter | Descripción |
   | ------------- | ------------- | ------------- |
