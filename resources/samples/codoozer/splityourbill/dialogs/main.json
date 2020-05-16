@@ -1,0 +1,19 @@
+{
+ "id": "main",
+ "title": {
+  "en": "Hi",
+  "es": "¡Hola"
+ },
+ "text": {
+  "en": "Codoozers!",
+  "es": "Codoozers!"
+ },
+ "buttons": {
+  "positive": {
+   "label": {
+    "en": "What's up!",
+    "es": "¡Qué tal!"
+   }
+  }
+ }
+}

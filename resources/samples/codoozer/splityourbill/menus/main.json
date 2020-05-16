@@ -1,0 +1,19 @@
+{
+ "id": "main",
+ "items": [
+  {
+   "id": "option1",
+   "title": {
+    "en": "Option 1",
+    "es": "Opción 1"
+   }
+  },
+  {
+   "id": "option2",
+   "title": {
+    "en": "Option 2",
+    "es": "Opción 2"
+   }
+  }
+ ]
+}

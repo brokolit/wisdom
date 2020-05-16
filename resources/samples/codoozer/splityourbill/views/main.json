@@ -1,0 +1,418 @@
+{
+ "id": "main",
+ "wrapper": "main_wrapper",
+ "title": {
+  "default": "Split your bill"
+ },
+ "content": [
+  {
+   "id": "mainBody",
+   "type": "group",
+   "content": [
+    {
+     "id": "priceArea",
+     "type": "group",
+     "content": [
+      {
+       "id": "howMuchTheBill",
+       "type": "text",
+       "height": "wrap",
+       "width": "100%",
+       "text": {
+        "default": "How much is the bill?",
+        "es": "¿Cuánto es la cuenta?"
+       },
+       "text_align": "center",
+       "font": "@font.MuliVariableFontWght",
+       "font_size": 22
+      },
+      {
+       "id": "inputPrice",
+       "type": "inputtext",
+       "height": "wrap",
+       "width": "45%",
+       "halign": "center",
+       "font": "@font.MuliVariableFontWght",
+       "font_size": 40,
+       "format": "decimal",
+       "source": "@property.price",
+       "text_align": "center",
+       "onchanged": [
+        {
+         "function": "set",
+         "what": "@property.tempPricePerPerson",
+         "value": "@property.price"
+        },
+        {
+         "function": "divide",
+         "what": "@property.tempPricePerPerson",
+         "by": "@property.people"
+        },
+        {
+         "function": "set",
+         "what": "@property.pricePerPerson",
+         "value": "@property.tempPricePerPerson"
+        },
+        {
+         "function": "set",
+         "what": "@property.tempTip5",
+         "value": "@property.price"
+        },
+        {
+         "function": "multiply",
+         "what": "@property.tempTip5",
+         "by": 0.05
+        },
+        {
+         "function": "set",
+         "what": "@property.tip5",
+         "value": "@property.tempTip5"
+        },
+        {
+         "function": "set",
+         "what": "@property.tempTip10",
+         "value": "@property.price"
+        },
+        {
+         "function": "multiply",
+         "what": "@property.tempTip10",
+         "by": 0.1
+        },
+        {
+         "function": "set",
+         "what": "@property.tip10",
+         "value": "@property.tempTip10"
+        }
+       ]
+      }
+     ],
+     "height": "wrap",
+     "width": "100%",
+     "scroll": false,
+     "orientation": "vertical",
+     "padding": 32
+    },
+    {
+     "id": "tipArea",
+     "type": "group",
+     "height": "wrap",
+     "width": "100%",
+     "content": [
+      {
+       "id": "cell0",
+       "type": "group",
+       "content": [
+        {
+         "id": "labelPercent0",
+         "type": "text",
+         "height": "wrap",
+         "width": "100%",
+         "text": "0%",
+         "font": "@font.MuliVariableFontWght",
+         "text_align": "center",
+         "font_size": 18
+        },
+        {
+         "id": "tip0",
+         "type": "text",
+         "height": "wrap",
+         "width": "100%",
+         "text": 0,
+         "text_align": "center",
+         "font": "@font.MuliVariableFontWght",
+         "font_size": 14
+        }
+       ],
+       "height": "wrap",
+       "width": "20%",
+       "scroll": false,
+       "orientation": "vertical",
+       "padding": 8,
+       "background": {
+        "type": "solid",
+        "color": "@color.primaryLight"
+       }
+      },
+      {
+       "id": "cell5",
+       "type": "group",
+       "content": [
+        {
+         "id": "Component1589501865254",
+         "type": "text",
+         "height": "wrap",
+         "width": "100%",
+         "text": "5%",
+         "font": "@font.MuliVariableFontWght",
+         "font_size": 18,
+         "text_align": "center"
+        },
+        {
+         "id": "tip5",
+         "type": "text",
+         "height": "wrap",
+         "width": "100%",
+         "text": 0,
+         "font": "@font.MuliVariableFontWght",
+         "font_size": 14,
+         "text_align": "center",
+         "source": "@property.tip5"
+        }
+       ],
+       "height": "wrap",
+       "width": "20%",
+       "scroll": false,
+       "orientation": "vertical",
+       "padding": 8
+      },
+      {
+       "id": "cell10",
+       "type": "group",
+       "content": [
+        {
+         "id": "Component1589502037320",
+         "type": "text",
+         "height": "wrap",
+         "width": "100%",
+         "text": "10%",
+         "font": "@font.MuliVariableFontWght",
+         "font_size": 18,
+         "text_align": "center"
+        },
+        {
+         "id": "Component1589502063513",
+         "type": "text",
+         "height": "wrap",
+         "width": "100%",
+         "text": 0,
+         "font": "@font.MuliVariableFontWght",
+         "font_size": 14,
+         "text_align": "center",
+         "source": "@property.tip10"
+        }
+       ],
+       "height": "wrap",
+       "width": "20%",
+       "scroll": false,
+       "orientation": "vertical",
+       "padding": 8,
+       "onclick": [
+        {
+         "function": "set",
+         "what": "@element.cell10.backgroundColor",
+         "value": "@color.primaryLight"
+        }
+       ]
+      },
+      {
+       "id": "cell15",
+       "type": "group",
+       "content": [
+        {
+         "id": "Component1589502149975",
+         "type": "text",
+         "height": "wrap",
+         "width": "100%",
+         "text": "15%",
+         "font": "@font.MuliVariableFontWght",
+         "font_size": 18,
+         "text_align": "center"
+        },
+        {
+         "id": "Component1589502172471",
+         "type": "text",
+         "height": "wrap",
+         "width": "100%",
+         "text": 0,
+         "font": "@font.MuliVariableFontWght",
+         "font_size": 14,
+         "text_align": "center",
+         "source": "@property.tip15"
+        }
+       ],
+       "height": "wrap",
+       "width": "20%",
+       "scroll": false,
+       "orientation": "vertical",
+       "padding": 8
+      },
+      {
+       "id": "cell20",
+       "type": "group",
+       "content": [
+        {
+         "id": "Component1589502224769",
+         "type": "text",
+         "height": "wrap",
+         "width": "100%",
+         "text": "20%",
+         "font": "@font.MuliVariableFontWght",
+         "font_size": 18,
+         "text_align": "center"
+        },
+        {
+         "id": "Component1589502248139",
+         "type": "text",
+         "height": "wrap",
+         "width": "100%",
+         "text": 0,
+         "font": "@font.MuliVariableFontWght",
+         "font_size": 14,
+         "text_align": "center",
+         "source": "@property.tip20"
+        }
+       ],
+       "height": "wrap",
+       "width": "20%",
+       "scroll": false,
+       "orientation": "vertical"
+      }
+     ],
+     "scroll": false,
+     "orientation": "horizontal",
+     "margin": {
+      "top": 32,
+      "bottom": 32
+     }
+    },
+    {
+     "id": "peopleArea",
+     "type": "group",
+     "content": [
+      {
+       "id": "peopleLabels",
+       "type": "group",
+       "content": [
+        {
+         "id": "howManyPeopleLabel",
+         "type": "text",
+         "height": "wrap",
+         "width": "wrap",
+         "text": {
+          "default": "How many people?",
+          "es": "¿Cuánta gente?"
+         },
+         "font": "@font.MuliVariableFontWght",
+         "font_size": 16
+        },
+        {
+         "id": "peopleCounter",
+         "type": "text",
+         "height": "wrap",
+         "width": "fill",
+         "text": 2,
+         "text_align": "end",
+         "font": "@font.MuliVariableFontWght",
+         "font_size": 16,
+         "source": "@property.people",
+         "halign": "end",
+         "decimals": 0
+        }
+       ],
+       "height": "wrap",
+       "width": "100%",
+       "scroll": false,
+       "orientation": "horizontal"
+      },
+      {
+       "id": "peopleRange",
+       "type": "range",
+       "height": "wrap",
+       "width": "100%",
+       "margin": {
+        "top": 24
+       },
+       "min": 2,
+       "max": 25,
+       "step": 1,
+       "source": "@property.people",
+       "onchanged": [
+        {
+         "function": "set",
+         "what": "@property.tempPricePerPerson",
+         "value": "@property.price"
+        },
+        {
+         "function": "divide",
+         "what": "@property.tempPricePerPerson",
+         "by": "@property.people"
+        },
+        {
+         "function": "set",
+         "what": "@property.pricePerPerson",
+         "value": "@property.tempPricePerPerson"
+        }
+       ]
+      }
+     ],
+     "height": "wrap",
+     "width": "100%",
+     "scroll": false,
+     "orientation": "vertical",
+     "margin": {
+      "top": 32,
+      "bottom": 32
+     }
+    },
+    {
+     "id": "resultArea",
+     "type": "group",
+     "content": [
+      {
+       "id": "personPriceLabel",
+       "type": "text",
+       "height": "wrap",
+       "width": "wrap",
+       "text": {
+        "default": "Price per person:",
+        "es": "Precio por persona:"
+       },
+       "font": "@font.MuliVariableFontWght",
+       "font_size": 20
+      },
+      {
+       "id": "Component1589497661193",
+       "type": "text",
+       "height": "wrap",
+       "width": "fill",
+       "text": 0,
+       "text_align": "end",
+       "font": "@font.MuliVariableFontWght",
+       "font_size": 32,
+       "source": "@property.pricePerPerson",
+       "decimals": 2
+      }
+     ],
+     "height": "wrap",
+     "width": "100%",
+     "scroll": false,
+     "orientation": "horizontal",
+     "margin": {
+      "top": 32,
+      "bottom": 32
+     },
+     "padding": 16,
+     "background": {
+      "type": "solid",
+      "color": "@color.secondaryLight"
+     }
+    }
+   ],
+   "height": "wrap",
+   "width": "90%",
+   "scroll": true,
+   "orientation": "vertical",
+   "halign": "center",
+   "valign": "middle"
+  }
+ ],
+ "events": {
+  "onpreload": [
+   {
+    "function": "set",
+    "what": "@property.people",
+    "value": 2
+   }
+  ]
+ }
+}

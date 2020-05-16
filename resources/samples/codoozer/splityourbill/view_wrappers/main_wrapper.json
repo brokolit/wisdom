@@ -1,0 +1,7 @@
+{
+ "id": "main_wrapper",
+ "actionbar": {
+  "back_button": false,
+  "color": "@color.primaryText"
+ }
+}

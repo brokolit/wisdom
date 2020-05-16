@@ -1,0 +1,53 @@
+{
+ "id": "c1589499647838",
+ "project_name": "splityourbill",
+ "name": {
+  "default": "Split your bill",
+  "es": "Divide la cuenta"
+ },
+ "android": {
+  "package_name": "com.codoozer.splityourbill",
+  "version": 1,
+  "version_name": "1.0.0"
+ },
+ "events": {
+  "onstart": [
+   {
+    "function": "goto",
+    "view": "main"
+   }
+  ]
+ },
+ "colors": {
+  "primary": "#b71c1c",
+  "primaryLight": "#f05545",
+  "primaryDark": "#7f0000",
+  "primaryText": "#ffffff",
+  "secondary": "#b0bec5",
+  "secondaryLight": "#e2f1f8",
+  "secondaryDark": "#808e95",
+  "secondaryText": "#000000",
+  "danger": "#dc3545",
+  "info": "#17a2b8",
+  "success": "#28a745",
+  "warning": "#fce359",
+  "dark": "#343a40",
+  "light": "#f8f9fa",
+  "blue": "#007bff",
+  "cyan": "#17a2b8",
+  "gray": "#6c757d",
+  "green": "#28a745",
+  "indigo": "#6610f2",
+  "orange": "#fd7e14",
+  "pink": "#e83e8c",
+  "purple": "#6f42c1",
+  "red": "#dc3545",
+  "teal": "#20c997",
+  "white": "#ffffff",
+  "yellow": "#ffc107",
+  "transparent": "#00FFFFFF"
+ },
+ "fonts": {
+  "MuliVariableFontWght": "fonts/Muli-VariableFont_wght.ttf"
+ }
+}
