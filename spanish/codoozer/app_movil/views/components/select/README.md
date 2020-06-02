@@ -7,11 +7,12 @@ La siguiente tabla muestra los parámetros que puede contener, además de los pa
 
   | Key  | Caracter | Descripción |
   | ------------- | ------------- | ------------- |
-  | color | Opcional | Color principal del texto y de la flecha del desplegable. |
+  | color | Opcional | Color principal del texto y de la flecha del desplegable. Si no se especifica, se utilizará el color @color.accent |
   | dropdown_background | Opcional | Color de fondo del desplegable.|
   | dropdown_color | Opcional | Color del texto del desplegable. Si no se especifica, se utilizará el especificado en el parámetro `color`, si existe.| 
   | dropdown_font | Opcional | Tipografía a utilizar en el desplegable. Si no se especifica, se utilizará el especificado en el parámetro `font`, si existe.|
-  | dropdown_font_size | Opcional |Tamaño de fuente en el desplegable. Si no se especifica, se utilizará el especificado en el parámetro `font_size`, si existe.| 
+  | dropdown_font_size | Opcional | Tamaño de fuente en el desplegable. Si no se especifica, se utilizará el especificado en el parámetro `font_size`, si existe.| 
+  | dropdown_padding | Opcional | Es un valor numérico que indica el margen interior en las opciones del desplegable, medido en dpi.| 
   | font | Opcional | Es la tipografía a utilizar.|
   | font_size | Opcional | Tamaño del texto. |
   | mode | Opcional | Indica el tipo de desplegable a utilizar. Puede ser `dropdown` o `dialog`. Con el primero, la lista se desplegará en la posición donde está el componente. Con el segundo, la lista flotará en la pantalla en una zona determinada, independientemente de la posición del componente. Por defecto, si no se especifica, será `dropdown`.|
@@ -19,6 +20,10 @@ La siguiente tabla muestra los parámetros que puede contener, además de los pa
   | [onchanged](#eventos) | Opcional | Evento que se producte cuando el usuario cambia la selección..|
   | source | Opcional | Indica con qué referencia (una property, una cookie, etc.) debe sincronizarse el contenido del selector. Es decir, dónde se tiene que almacenar el texto que escriba el usuario y cuál debe ser el valor inicial de la caja de texto. |
   
+Este componente no acepta background de tipo `image`, solo background de tipo `color`. De no especificarse, se utilizará el @color.primaryLight.
+
+Hay que prestar atención a que este componente guardará en la referencia especificada en `source` el `value` de la opción seleccionada, no el `label`. De este modo, el valor de la selección será independiente del idioma de la app. Para poder usar el contenido de `label`, se puede utilizar la referencia `@element.[id_del_componente].label`.
+
 ## Opciones
 
 La lista de opciones es un array de objetos JSON. Cada objeto tendrá estos parámetros:
@@ -26,7 +31,7 @@ La lista de opciones es un array de objetos JSON. Cada objeto tendrá estos par�
   | Key  | Caracter | Descripción |
   | ------------- | ------------- | ------------- |
   | value | Obligatorio | Valor asociado a la opción. Es el valor que se guardará en la referencia indicada en `source`. |
-  | label | Opcional | El texto a mostrar en la lista desplegable para la opción correspondiente. Puede aceptar multilenguaje. Si no se especifica, la lista mostrará el valor especificado en `value`. Para poder usar el contenido de `label`, se puede utilizar la referencia `@element.[id_del_componente].label`. |
+  | label | Opcional | El texto a mostrar en la lista desplegable para la opción correspondiente. Puede aceptar multilenguaje. Si no se especifica, la lista mostrará el valor especificado en `value`. |
 
 ## Eventos
 
