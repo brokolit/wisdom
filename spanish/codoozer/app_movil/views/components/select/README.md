@@ -15,8 +15,8 @@ La siguiente tabla muestra los parámetros que puede contener, además de los pa
   | font | Opcional | Es la tipografía a utilizar.|
   | font_size | Opcional | Tamaño del texto. |
   | mode | Opcional | Indica el tipo de desplegable a utilizar. Puede ser `dropdown` o `dialog`. Con el primero, la lista se desplegará en la posición donde está el componente. Con el segundo, la lista flotará en la pantalla en una zona determinada, independientemente de la posición del componente. Por defecto, si no se especifica, será `dropdown`.|
-  | (options)[opciones] | Obligatorio | La lista de opciones de entre las cuales se elegirá el valor del componente.|
-  | (onchanged)[eventos] | Opcional | Evento que se producte cuando el usuario cambia la selección..|
+  | [options](#opciones) | Obligatorio | La lista de opciones de entre las cuales se elegirá el valor del componente.|
+  | [onchanged](#eventos) | Opcional | Evento que se producte cuando el usuario cambia la selección..|
   | source | Opcional | Indica con qué referencia (una property, una cookie, etc.) debe sincronizarse el contenido del selector. Es decir, dónde se tiene que almacenar el texto que escriba el usuario y cuál debe ser el valor inicial de la caja de texto. |
   
 ## Opciones
