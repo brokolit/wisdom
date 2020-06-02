@@ -7,6 +7,7 @@ La siguiente tabla muestra los parámetros que puede contener, además de los pa
 
   | Key  | Caracter | Descripción |
   | ------------- | ------------- | ------------- |
+  | border | Opcional | Color del borde del componente. El valor puede ser un color en formato #AARRGGB, un color en formato #RRGGBB, o una referencia a un color de la tabla de colores. También podría tener como valor un objeto JSON, en el cual se podrían especificar de forma independiente los colores de los bordes `top`, `bottom`, `start` y `end`.  |
   | color | Opcional | Color principal del texto y de la flecha del desplegable. Si no se especifica, se utilizará el color @color.accent |
   | dropdown_background | Opcional | Color de fondo del desplegable.|
   | dropdown_color | Opcional | Color del texto del desplegable. Si no se especifica, se utilizará el especificado en el parámetro `color`, si existe.| 
