@@ -39,7 +39,7 @@ Mediante una función `set`, se pueden editar estas propiedades del componente (
 
 Por otro lado, podemos obtener las siguientes propiedades del componente. Por ejemplo, como `value` en una función `set`:
 
-    | Nombre  | Descripción |
+  | Nombre  | Descripción |
   | ------------- | ------------- |
   | duration | Es la duración total del vídeo, en segundos. |
   | play | Vale `true` si el vídeo se está reproduciendo o `false` si está pausado. |
