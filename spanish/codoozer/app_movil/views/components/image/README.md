@@ -16,7 +16,7 @@ La siguiente tabla muestra los parámetros que puede contener, además de los pa
 
 ## Eventos
 
-El componente `range` admite los siguientes eventos:
+El componente `image` admite los siguientes eventos:
 
  | Evento  | Descripción |
   | ------------- | ------------- |

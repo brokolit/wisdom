@@ -66,6 +66,7 @@ Los componentes que se pueden incluir son:
 | [range](components/range) | Selector con barra de desplazamiento |
 | switch | Conmutador on/off |
 | text | Para mostrar un texto |
+| [video](components/video) | Vídeo |
 | web | Para mostrar una página web incrustada |
 
 Todos los componentes se definen como objetos JSON, los cuales contendrán unos parámetros generales, independientes del tipo de componente de que se trate, así como otros parámetros específicos en función del tipo de componente.
