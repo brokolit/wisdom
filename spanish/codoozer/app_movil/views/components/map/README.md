@@ -64,12 +64,12 @@ Cada documento de la colección deberá contener estos parámetros:
 
  | Propiedad  | Descripción |
   | ------------- | ------------- |
-  | type | Tipo de elemento. Debe ser `marker`, `circle` u `overlay`. |
+  | type | Tipo de elemento. Debe ser `marker` o `circle`. |
   | lat | Latitud donde debe dibujarse el elemento. |
   | lng | Longitud donde debe dibujarse el elemento. |
-
+\
+\
 Además, en función del tipo de elemento, se podrán usar estos otros parámetros.
-
 \
 \
 Para elementos de tipo `marker`:
@@ -91,6 +91,6 @@ Para elementos de tipo `circle`:
   | radius | Radio en metros del círculo. |
   | stroke_color | Color del perímetro, pudiendo ser un color de la tabla de colores o un valor #RGB/#ARGB. |
   | stroke_width | Grosor del perímetro. |
-  
+
 
 
