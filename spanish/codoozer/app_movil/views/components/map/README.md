@@ -10,7 +10,7 @@ La siguiente tabla muestra los parámetros que puede contener, más allá de los
   | buildings | Opcional | Determina si se quiere mostrar edificios en el mapa. Puede tener los valores `true` o `false`. Si no se especifica el parámetro, se considera valor `false`. |
   | center | Opcional | Es la posición inicial sobre la que se debe centrar el mapa. Puede ser una cadena de texto en formato "latitud,longitud", o una referencia que contenga dicha ubicación. En caso de usarse una referencia, el mapa se irá centrando cada vez que el valor de la variable referida cambie. |
   | compass | Opcional | Determina si se quiere mostrar la brújula en el mapa. Puede tener los valores `true` o `false`. Si no se especifica el parámetro, se considera valor `false`. |
-  | data_source | Opcional | Define un origen de datos que contiene los elementos a representar sobre el mapa (marcadores, formas, etc.) |
+  | [data_source](#data-source) | Opcional | Define un origen de datos que contiene los elementos a representar sobre el mapa (marcadores, formas, etc.) |
   | enable_location | Opcional | Establece si el mapa debe mostrar el botón para desplazarse hasta la ubicación actual del dispositivo. Puede valer `true` o `false`. Si no se especifica el parámetro, se considera el valor `false`. |
   | max_zoom | Opcional | Se utiliza para limitar el máximo nivel de zoom que queremos permitir al usuario, es decir, cuánto se podrá acercar como máximo el punto de vista al mapa. |
   | min_zoom | Opcional | Se utiliza para limitar el mínimo nivel de zoom que queremos permitir al usuario. No podrá alejar el punto de vista más allá de lo que establezca el zoom mínimo. |
@@ -50,3 +50,44 @@ La siguiente tabla muestra las propiedades que se pueden obtener de un mapa, en 
   | clickedLng | Longitud del último punto del mapa que el usuario haya tocado. |
   | position | Coordenadas del punto central actual del mapa, en formato `latitud,longitud`. |
   | zoom | Nivel de zoom actual del mapa. |
+
+
+
+## data-source
+
+El campo data-source debe contener una referencia a una colección, ya sea de una base de datos local o una base de datos de firebase. Dicha colección contendrá los elementos que deben representarse en el mapa: marcadores, círculos o imágenes.
+
+El mapa estará escuchando a dicha colección continuamente y, en caso de que algún documento cambie o se añada uno nuevo, se actualizará el mapa.
+
+Cada documento de la colección deberá contener estos parámetros:
+
+
+ | Propiedad  | Descripción |
+  | ------------- | ------------- |
+  | type | Tipo de elemento. Debe ser `marker`, `circle` u `overlay`. |
+  | lat | Latitud donde debe dibujarse el elemento. |
+  | lng | Longitud donde debe dibujarse el elemento. |
+
+Además, en función del tipo de elemento, se podrán usar estos otros parámetros.
+
+Para elementos de tipo `marker`:
+
+ | Propiedad  | Descripción |
+  | ------------- | ------------- |
+  | anchor_h | Valor entre 0 y 1 que indica el desplazamiento horizontal del icono con respecto al punto en el mapa. |
+  | anchor_v | Valor entre 0 y 1 que indica el desplazamiento vertical del icono con respecto al punto en el mapa. |
+  | icon | Ruta a una imagen que debe estar en la carpeta `res/assets`. |
+  | rotation | Ángulo de rotación de la imagen, en grados. |
+
+
+Para elementos de tipo `circle`:
+
+ | Propiedad  | Descripción |
+  | ------------- | ------------- |
+  | color | Color de la superficie del círculo, pudiendo ser un color de la tabla de colores o un valor #RGB/#ARGB. |
+  | radius | Radio en metros del círculo. |
+  | stroke_color | Color del perímetro, pudiendo ser un color de la tabla de colores o un valor #RGB/#ARGB. |
+  | stroke_width | Grosor del perímetro. |
+  
+
+
