@@ -70,6 +70,8 @@ Cada documento de la colección deberá contener estos parámetros:
 
 Además, en función del tipo de elemento, se podrán usar estos otros parámetros.
 
+\
+\
 Para elementos de tipo `marker`:
 
  | Propiedad  | Descripción |
@@ -79,7 +81,8 @@ Para elementos de tipo `marker`:
   | icon | Ruta a una imagen que debe estar en la carpeta `res/assets`. |
   | rotation | Ángulo de rotación de la imagen, en grados. |
 
-
+\
+\
 Para elementos de tipo `circle`:
 
  | Propiedad  | Descripción |
