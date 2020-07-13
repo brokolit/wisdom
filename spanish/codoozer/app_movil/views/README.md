@@ -57,14 +57,16 @@ Los componentes que se pueden incluir son:
 | ------------- | ------------- |
 | banner | Banner de publicidad |
 | button | Botón |
+| [cropper](components/cropper) | Imagen |
 | group | Grupo que permite incluir dentro otros componentes |
 | [image](components/image) | Imagen |
-| inputtext | Campo de entrada de texto |
-| list | Lista o rejilla |
-| map | Mapa de GoogleMaps |
+| [inputtext](components/inputtext) | Campo de entrada de texto |
+| [list](components/list) | Lista o rejilla |
+| [map](components/map) | Mapa de GoogleMaps |
 | pdfviewer | Visor de archivos pdf |
 | [range](components/range) | Selector con barra de desplazamiento |
-| switch | Conmutador on/off |
+| [scanner](components/scanner) | Imagen |
+| [switch](components/switch) | Conmutador on/off |
 | text | Para mostrar un texto |
 | [video](components/video) | Vídeo |
 | web | Para mostrar una página web incrustada |
