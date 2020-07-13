@@ -13,7 +13,7 @@ La siguiente tabla muestra los parámetros que puede contener, además de los pa
   | source | Opcional | Indica si la imagen a mostrar debe obtenerse de alguna referencia.|
   
 
-
+\
 ## Eventos
 
 El componente `image` admite los siguientes eventos:
@@ -22,7 +22,8 @@ El componente `image` admite los siguientes eventos:
   | ------------- | ------------- |
   | onclick | Se produce cuando el usuario toca la imagen. |
 
-
+\
+\
 ## Referencias
 
 El componente `image` permite acceder a ciertas propiedades a través de referencias, usando el siguiente formato:
