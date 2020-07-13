@@ -29,8 +29,8 @@ El componente `text` admite los siguientes eventos:
   | onclick | Se produce cuando el usuario toca el componente. |
 
 
-
- 
+\
+\
 ## Referencias
 
 Este componente permite acceder a ciertas propiedades a través de referencias, usando el siguiente formato:
