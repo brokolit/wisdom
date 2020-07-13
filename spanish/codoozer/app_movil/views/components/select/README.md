@@ -42,3 +42,20 @@ El componente `select` admite los siguientes eventos:
   | ------------- | ------------- |
   | onchanged | Se produce cuando el usuario cambia el valor seleccionado en el componente. Hay que tener en cuenta que este evento no se invocará si el componente cambia de valor por el hecho de que la referencia en el parámetro `source` haya cambiado de valor. |
 
+
+## Referencias
+
+Este componente permite acceder a ciertas propiedades a través de referencias, usando el siguiente formato:
+
+```
+@element.id_del_componente.propiedad
+```
+
+Las propiedades de escritura se podrán establecer como parámetro `what` de una función `set`.
+Las propiedades de lectura se podrán usar como valor en aquellas funciones que acepten valores en forma de referencias.
+
+ | Propiedad | Modo | Descripción |
+  | ------------- | ------------- | ------------- |
+  | alpha | Escritura | Opacidad del componente, un valor entre 0 (0%) y 1 (100%) |
+  | backgroundColor | Escritura | Color de fondo del componente. Acepta un color de la tabla de colores (@color.primary) o un valor hexadecimal en formato #AARRGGBB o #RRGGBB |
+  | visible | Escritura/lectura | Indica si el componente es visible (`true`) o no (`false`) |
