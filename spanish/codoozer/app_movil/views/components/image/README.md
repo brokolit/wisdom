@@ -12,7 +12,7 @@ La siguiente tabla muestra los parámetros que puede contener, además de los pa
   | scale | Opcional | Especifica cómo se tiene que escalar la imagen para adaptarse a los límites del componente. Actualmente puede contener el valor `crop`, que hará que la imagen se escale para rellenar totalmente los límites del componente, pudiendo salirse de los límites horizontales o los verticales. Si no se especifica este parámetro, en caso de que la altura del componente no sea `wrap`, la imagen se estiraría para rellenar todo el área del componente.|
   | source | Opcional | Indica si la imagen a mostrar debe obtenerse de alguna referencia.|
   
-
+ 
 
 ## Eventos
 
@@ -23,7 +23,7 @@ El componente `image` admite los siguientes eventos:
   | onclick | Se produce cuando el usuario toca la imagen. |
 
 
- \
+ 
 ## Referencias
 
 El componente `image` permite acceder a ciertas propiedades a través de referencias, usando el siguiente formato:
