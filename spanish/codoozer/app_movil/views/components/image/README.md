@@ -22,3 +22,17 @@ El componente `image` admite los siguientes eventos:
   | ------------- | ------------- |
   | onclick | Se produce cuando el usuario toca la imagen. |
 
+
+## Referencias
+
+El componente `image` permite acceder a ciertas propiedades a través de referencias, usando el siguiente formato:
+
+```
+@element.id_del_componente.propiedad
+```
+
+ | Propiedad | Modo | Descripción |
+  | ------------- | ------------- | ------------- |
+  | alpha | Escritura | Opacidad del componente, un valor entre 0 (0%) y 1 (100%) |
+  | backgroundColor | Escritura | Color de fondo del componente. Acepta un color de la tabla de colores (@color.primary) o un valor hexadecimal en formato #AARRGGBB o #RRGGBB |
+  | visible | Escritura/lectura | Indica si el componente es visible (`true`) o no (`false`) |
