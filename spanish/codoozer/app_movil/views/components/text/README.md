@@ -20,6 +20,7 @@ La siguiente tabla muestra los parámetros que puede contener, además de los pa
   
 
 \
+
 ## Eventos
 
 El componente `text` admite los siguientes eventos:
@@ -31,6 +32,7 @@ El componente `text` admite los siguientes eventos:
 
 
 \
+
 ## Referencias
 
 Este componente permite acceder a ciertas propiedades a través de referencias, usando el siguiente formato:
