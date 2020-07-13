@@ -31,7 +31,11 @@ Un ActionBar es una barra superior que se muestra en la pantalla y puede contene
   | menu | Es el ID del menú definido en la carpeta `menus` que queremos añadir a la barra. Las opciones del menú se pueden mostrar como iconos de acción o aparecer dentro de un menú emergente, en función de como se defina en el JSON del menú correspondiente. |
   | ios_type | Este parámetro solo se utiliza en las apps de iOS. Indica el tipo de barra, si es comprimida (`inline`) o grande (`large`)  |
   
+Mediante la función `SET` se pueden modificar estas propiedades del actionbar:
   
+   | Propiedad | Descripción |
+  | ------------- | ------------- | ------------- |
+  | @wrapper.actionbar.title | Permite cambiar el título del actionbar |
 
     
   
@@ -45,7 +49,13 @@ Un Drawer es un panel lateral que aparece al hacer swipe desde el borde lateral 
   | subtitle | Subtítulo a mostrar en la cabecera del panel. Acepta multilenguaje |
   | menu | ID del menú a utilizar |
   
+Mediante la función `SET` se pueden modificar estas propiedades del drawer:
   
+   | Propiedad | Descripción |
+  | ------------- | ------------- | ------------- |
+  | @wrapper.drawer.icon | Permite cambiar la imagen del icono en la cabecera del drawer. Debe ser el nombre de un archivo incluído en la carpeta `assets` o una referencia que guarde una imagen |
+  | @wrapper.drawer.title | Permite cambiar el texto del título de la cabecera del drawer. |
+  | @wrapper.drawer.subtitle | Permite cambiar el texto del subtítulo de la cabecera del drawer. |
   
   ## Pager
 Un Pager (paginador) se utiliza para cargar varias `view` y poder navegar entre ellas mediante scroll horizontal. 
