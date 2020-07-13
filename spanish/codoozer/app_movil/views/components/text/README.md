@@ -19,7 +19,7 @@ La siguiente tabla muestra los parámetros que puede contener, además de los pa
   | source | Opcional | Indica de qué referencia (una property, una cookie, etc.) debe obtenerse el texto. |
   
 
-\
+
 
 ## Eventos
 
@@ -31,7 +31,7 @@ El componente `text` admite los siguientes eventos:
 
 
 
-\
+
 
 ## Referencias
 
