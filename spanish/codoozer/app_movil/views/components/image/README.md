@@ -32,6 +32,10 @@ El componente `image` permite acceder a ciertas propiedades a través de referen
 @element.id_del_componente.propiedad
 ```
 
+Las propiedades de escritura se podrán establecer como parámetro `what` de una función `set`.
+Las propiedades de lectura se podrán usar como valor en aquellas funciones que acepten valores en forma de referencias.
+
+
  | Propiedad | Modo | Descripción |
   | ------------- | ------------- | ------------- |
   | alpha | Escritura | Opacidad del componente, un valor entre 0 (0%) y 1 (100%) |
