@@ -41,6 +41,7 @@ Por ejemplo, si un componente MAP tiene el ID `mainMap`, podríamos acceder a la
 
 > @element.mainMap.position
 
+
 La siguiente tabla muestra las propiedades que se pueden obtener de un mapa, en modo lectura:
 
 
@@ -49,7 +50,15 @@ La siguiente tabla muestra las propiedades que se pueden obtener de un mapa, en 
   | clickedLat | Latitud del último punto del mapa que el usuario haya tocado. |
   | clickedLng | Longitud del último punto del mapa que el usuario haya tocado. |
   | position | Coordenadas del punto central actual del mapa, en formato `latitud,longitud`. |
+  | visible | Indica si el componente es visible (`true`) o no (`false`) |
   | zoom | Nivel de zoom actual del mapa. |
+  
+La siguiente tabla muestra las propiedades que se pueden obtener de un mapa, en modo escritura:
+
+ | Propiedad  | Descripción |
+  | alpha | Opacidad del componente, un valor entre 0 (0%) y 1 (100%) |
+  | backgroundColor | Color de fondo del componente. Acepta un color de la tabla de colores (@color.primary) o un valor hexadecimal en formato #AARRGGBB o #RRGGBB |
+  | visible | Indica si el componente es visible (`true`) o no (`false`) |
 
 
 
@@ -67,11 +76,11 @@ Cada documento de la colección deberá contener estos parámetros:
   | type | Tipo de elemento. Debe ser `marker` o `circle`. |
   | lat | Latitud donde debe dibujarse el elemento. |
   | lng | Longitud donde debe dibujarse el elemento. |
-\
-\
+
+
 Además, en función del tipo de elemento, se podrán usar estos otros parámetros.
-\
-\
+
+
 Para elementos de tipo `marker`:
 
  | Propiedad  | Descripción |
@@ -81,8 +90,8 @@ Para elementos de tipo `marker`:
   | icon | Ruta a una imagen que debe estar en la carpeta `res/assets`. |
   | rotation | Ángulo de rotación de la imagen, en grados. |
 
-\
-\
+
+
 Para elementos de tipo `circle`:
 
  | Propiedad  | Descripción |
