@@ -45,4 +45,7 @@ Este componente permite acceder a ciertas propiedades a través de referencias, 
   | ------------- | ------------- | ------------- |
   | alpha | Escritura | Opacidad del componente, un valor entre 0 (0%) y 1 (100%) |
   | backgroundColor | Escritura | Color de fondo del componente. Acepta un color de la tabla de colores (@color.primary) o un valor hexadecimal en formato #AARRGGBB o #RRGGBB |
+  | color | Escritura | Establece el color del texto |
+  | font | Escritura | Establece la tipografía a usar en el texto como una referencia a la tabla `fonts` (@font.arial) |
+  | font_size | Escritura | Establece el tamaño de letra |
   | visible | Escritura/lectura | Indica si el componente es visible (`true`) o no (`false`) |
