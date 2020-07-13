@@ -34,8 +34,11 @@ Mediante una función `set`, se pueden editar estas propiedades del componente (
 
   | Nombre  | Descripción |
   | ------------- | ------------- |
+  | alpha | Opacidad del componente, un valor entre 0 (0%) y 1 (100%) |
+  | backgroundColor | Color de fondo del componente. Acepta un color de la tabla de colores (@color.primary) o un valor hexadecimal en formato #AARRGGBB o #RRGGBB |
   | play | Puede ser `true` o `false`. Un valor `true` pondrá el vídeo en modo reproducción si estaba pausado. Un valor `false` pausará el vídeo si se estaba reproduciendo. |
   | position | Establece la posición, en segundos (acepta decimales), desde la que queremos que se reproduzca el vídeo. |
+  | visible | Indica si el componente es visible (`true`) o no (`false`) |
   | volume | Establece el volumen actual del audio. Debe ser un valor entre 0 a 100. |
 
 
@@ -46,6 +49,7 @@ Por otro lado, podemos obtener las siguientes propiedades del componente. Por ej
   | duration | Es la duración total del vídeo, en segundos. |
   | play | Vale `true` si el vídeo se está reproduciendo o `false` si está pausado. |
   | position | Es la posición actual de la reproducción, en segundos. |
+  | visible | Indica si el componente es visible (`true`) o no (`false`) |
   | volume | Es el volumen actual del audio, un valor entre 0 a 100. |
   
 
