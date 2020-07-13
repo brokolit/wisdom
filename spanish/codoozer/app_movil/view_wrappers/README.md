@@ -34,7 +34,7 @@ Un ActionBar es una barra superior que se muestra en la pantalla y puede contene
 Mediante la función `SET` se pueden modificar estas propiedades del actionbar:
   
    | Propiedad | Descripción |
-  | ------------- | ------------- | ------------- |
+  | ------------- | ------------- |
   | @wrapper.actionbar.title | Permite cambiar el título del actionbar |
 
     
@@ -52,7 +52,7 @@ Un Drawer es un panel lateral que aparece al hacer swipe desde el borde lateral 
 Mediante la función `SET` se pueden modificar estas propiedades del drawer:
   
    | Propiedad | Descripción |
-  | ------------- | ------------- | ------------- |
+  | ------------- | ------------- |
   | @wrapper.drawer.icon | Permite cambiar la imagen del icono en la cabecera del drawer. Debe ser el nombre de un archivo incluído en la carpeta `assets` o una referencia que guarde una imagen |
   | @wrapper.drawer.title | Permite cambiar el texto del título de la cabecera del drawer. |
   | @wrapper.drawer.subtitle | Permite cambiar el texto del subtítulo de la cabecera del drawer. |
