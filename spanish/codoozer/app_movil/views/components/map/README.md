@@ -49,7 +49,10 @@ La siguiente tabla muestra las propiedades que se pueden obtener de un mapa, en 
   | ------------- | ------------- |
   | clickedLat | Latitud del último punto del mapa que el usuario haya tocado. |
   | clickedLng | Longitud del último punto del mapa que el usuario haya tocado. |
-  | position | Coordenadas del punto central actual del mapa, en formato `latitud,longitud`. |
+  | lat | Latitud del punto central actual del mapa. |
+  | lng | Longitud del punto central actual del mapa. |
+  | location | Coordenadas del punto central actual del mapa, en formato `latitud,longitud`. |
+  | selected | ID del marcador seleccionado. |
   | visible | Indica si el componente es visible (`true`) o no (`false`) |
   | zoom | Nivel de zoom actual del mapa. |
   
