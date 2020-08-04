@@ -1,0 +1,22 @@
+{
+    "id":0,
+    "project_name":"sample_app",
+    "name":{"es":"This is just a sample JSON"},
+    "android":{
+        "package_name":"com.mycooldomain.myappname",
+        "version":1,
+        "version_name":"1.0.0",
+        "maps_api_key":"[your_googlemaps_api_key]"
+        
+    },
+    "events":{
+        "onstart": {"function":"goto","view":"[my_main_screen]"}
+    },
+    "colors":{
+        "white": "#ffffff",
+        "black": "#000000"
+    },
+    "fonts":{
+        
+    }
+}
