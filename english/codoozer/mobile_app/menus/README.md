@@ -1,5 +1,5 @@
-# Carpeta menus
+# Menus folder
 
-Esta carpeta solo es necesaria si tenemos previsto incluir menús nativos dentro de nuestra app. Estos son los menús que se utilizan, por ejemplo, en las barras ActionBar, paneles laterales, componentes tipo `list`, etc.
+This folder is only needed in case we want to include native menus inside our app. This menus are used on action bars, side drawers, `list` components, etc.
 
-En cambio, si lo que se pretende es que los menús de la app se compongan de componentes gráficos (imágenes, textos con enlaces, etc.), no será necesario crear esta carpeta.
+You can also create menus with your own graphic components (images, texts, etc.). In that case, you don't need to define a menu file in this folder.

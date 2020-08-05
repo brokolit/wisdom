@@ -1,3 +1,3 @@
-# Carpeta external
+# External folder
 
-Esta carpeta solo es necesaria en caso de que queramos utilizar algún complemento ofrecido por un tercero. Por ejemplo, si vamos a utilizar Firebase de Google en nuestra app, deberíamos crear la carpeta `external` y poner dentro de ella el archivo `google-services.json`.
+This folder is only needed in case we want to use a 3rd party library. For example, for using Google Firebase in our project, this folder is where we need to upload the file `google-services.json` provided by Firebase.

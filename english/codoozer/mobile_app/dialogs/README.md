@@ -1,3 +1,3 @@
-# Carpeta dialogs
+# Dialogs folder
 
-Esta carpeta solo es necesaria en caso de que queramos definir diálogos en nuestra app. Los diálogos son ventanas emergente que podemos utilizar para informar al usuario de algo o solicitarle algún tipo de información.
+This folder is only needed in case you want to dialogs in your app. Dialogs are pop-up windows that we can use to tell something to the user, request permission or ask for information.
