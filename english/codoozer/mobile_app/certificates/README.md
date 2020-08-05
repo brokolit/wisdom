@@ -1,5 +1,5 @@
-# Carpeta certificates
+# Certicates folder
 
-Esta carpeta solo es necesaria si quieres firmar las aplicaciones con certificados específicos. Por ejemplo, si quieres hacer con codoozer una app que ya tenías publicada en GooglePlay, necesitarás utilizar el mismo certificado que ya usaste. Si no quieres crear usar un certificado específico, Codoozer generará certificados aleatorios propios de cada app.
+This folder is only needed in case you want to use your own certificate to sign the app. For example, if you want to use Codoozer to build and old app that made with another platform and published on GooglePlay, you'll need to use the same certificate that was used the first time. If you don't want to use your own certifica, Codoozer will generate a random certificate for each app.
 
-Para Android, puedes aportar un archivo de almacén de claves (keystore), que podrás generar con la aplicación Keytool que viene incluída en las distribuciones de Java.
+For android, you can use a java keystore file. You can get your own keystore using the app Keytool that comes with all Java distributions.
