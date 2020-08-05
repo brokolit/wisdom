@@ -1,24 +1,24 @@
-# Carpeta res
+# Res folder
 
-Esta carpeta debería ser incluida siempre, al menos para añadir un icono a la aplicación.
+This folder should always exist, at least for adding an icon for our project.
 
-Dentro de esta carpeta se alojan todos los archivos que queramos utilizar de algún modo en nuestra aplicación. Los archivos que estén alojados directamente sobre la carpeta `res`, solo se añadirán a la app en caso de que se referencien desde algún punto de la app.
+Inside this folder we will place all the content files that we will use at some point of our app. The files stored inside the `res` folder will only be added to the final app in case they are used in some component of any other place.
+
+The `res` folder can have subfolders to organize our files. The next 3 folders are used by Codoozer.
 
 ##### res / assets
 
-Los archivos que se incluyan dentro de la subcarpeta `assets` se incluirán SIEMPRE en la app, aunque no se referencien directamente. Esto es útil, por ejemplo, si se piensa referenciar dichos recursos desde un campo de una base de datos, una cookie, etc.
+The `assets` folder is a special (and optional) folder. All the files inside that folder will be ALWAYS be added to the final app, even if they are not used directly in our project. This is useful in case we have the intention to use those resources on databases, cookies, etc.
 
 ##### res / fonts
 
-Esta carpeta solo será necesaria si queremos incluir fuentes TTF dentro de nuestra app. Además de añadir los archivos en esta carpeta, será necesario dar de alta las fuente dentro del archivo app.json
+This folder is only needed if we want to use TTF fonts in our project. We must add the font files in this folder, but also add the fonts inside the app.json file.
 
 ##### res / icon
 
-Esta carpeta debe incluir como mínimo un archivo PNG, que será el que se utilizará como icono por defecto para todos aquellos casos en los que no se especifique un icono concreto.
+This folder must include at least a PNG file, that will be the default icon to be used in all those case when we don't set an specific icon.
 
-Si el nombre de un archivo es un número, por ejemplo `192.png`, se utilizará dicho archivo en aquellas plataformas o versiones que necesiten un icono con un ancho igual a dicho número.
+If the name of an icon file starts with `icon_` followed by a number (icon_114.png), that icon will be used for those platforms (or versions) that need an icon of that size in pixels.
 
-También se puede añadir el prefijo `android` o `ios` para especificar que un icono es para una plataforma específica. Por ejemplo, `android.png`.
-
-Incluso, se puede combinar el prefijo con un número. Por ejemplo, `android_192.png`.
+We can also use the prefix `android` or `ios` to set specific icons for those platforms. For instance, the default icon for android would be called `android.png`, while an icon for android platforms and 114 pixels would be called `android_114.png`.
 
