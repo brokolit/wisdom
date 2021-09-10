@@ -65,7 +65,8 @@ Los componentes que se pueden incluir son:
 | [map](components/map) | Mapa de GoogleMaps |
 | pdfviewer | Visor de archivos pdf |
 | [range](components/range) | Selector con barra de desplazamiento |
-| [scanner](components/scanner) | Imagen |
+| [scanner](components/scanner) | Escáner de códigos de barra y QR |
+| [stripe_checkout](components/stripe_checkout) | Muestra una página de checkout para pagos mediante Stripe |
 | [switch](components/switch) | Conmutador on/off |
 | text | Para mostrar un texto |
 | [video](components/video) | Vídeo |

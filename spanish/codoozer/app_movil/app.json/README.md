@@ -12,6 +12,7 @@ La siguiente tabla muestra los parámetros que puede contener:
   | project_name | Obligatorio | Nombre identificativo del proyecto, asignado por el desarrollador |
   | name | Obligatorio | Nombre de la app, tal cual aparecerá al instalarse en un dispositivo. Acepta [multilenguaje](../../multilenguaje) |
   | [android](#configuración-android) | Opcional | Contiene configuración específica para generar la versión compatible con dispositivos Android. Por tanto, solo es necesario en caso de que se desee generar dicha versión. |
+  | [api](#api) | Opcional | Contiene la configuración específica para hacer uso del API de Codoozer que da acceso a algunas APIs externas.|
   | [ios](#configuración-ios) | Opcional | Contiene configuración específica para generar la versión compatible con dispositivos iOS (Apple). Por tanto, solo es necesario en caso de que se desee generar dicha versión. |
   | [events](#eventos-de-la-app) | Obligatorio | Define el comportamiento de la app como respuesta a determinados eventos. Debe contener, como mínimo, el evento `onstart`, en el que definiremos qué debe hacer la app al ejecutarse. Por ejemplo, la función `goto` para cargar una vista. |
   | [monetization](#monetización) | Opcional | Contiene la configuración necesaria para activar la monetización por publicidad |
@@ -60,7 +61,12 @@ La siguiente tabla muestra los parámetros que acepta el valor del parámetro `f
   | messaging | Notificaciones push |
   
 
+## API
+Codoozer ofrece una serie de APIs que facilitan la integración con estos productos de terceros:
 
+| Key  | Descripción |
+| ------------- | ------------- |
+| stripe(api/stripe) | Una de las principales pasarelas de pagos online del mundo.|
 
 ## Configuración iOS
 
