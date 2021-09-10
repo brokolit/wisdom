@@ -2,7 +2,7 @@
 
 El componente `stripe_checkout` muestra una sesión de checkout de Stripe. Stripe es una de las principales plataformas de pagos a través de Internet. Puedes usarlo dentro de tus apps creadas con Codoozer para la venta de productos físicos y/o servicios. En caso de que tu app la publiques en las appstores de Google o Apple, no puedes usar Stripe para venta de contenido digital. En esos casos, debes hacer uso de las compras in-app, usando la pasarela de pago que dichas appstores ofrecen, también compatibles con Codoozer.
 
-Este componente te facilita la integración de Stripe en Codoozer, pues utiliza el propio backend de Codoozer para realizar las comunicaciones con el API de Stripe, con lo que no te tienes que preocupar de desarrollar tu propio backend. Para ello, es necesario que tu cuenta de Stripe esté conectada a la de Doyo y hagas uso de las referencias [@api.stripe](../../app.json/api/stripe).
+Este componente te facilita la integración de Stripe en Codoozer, pues utiliza el propio backend de Codoozer para realizar las comunicaciones con el API de Stripe, con lo que no te tienes que preocupar de desarrollar tu propio backend. Para ello, es necesario que tu cuenta de Stripe esté conectada a la de Doyo y hagas uso de las referencias [@api.stripe](../../../app.json/api/stripe).
 
 Si no quieres utilizar nuestro backend de Stripe, puedes seguir integrando pagos con Stripe a través de tu propio backend, realizando conexiones desde la app mediante la acción `request` y mostrando el checkout con un componente `web`, con lo que no necesitarás usar el componente `stripe_checkout`.
 
