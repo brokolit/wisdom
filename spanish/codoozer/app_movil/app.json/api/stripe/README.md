@@ -22,8 +22,8 @@ Dentro de la referencia `@api.stripe` se pueden encontrar algunas colecciones qu
   | Key | Tipo | Descripción | Modo |
   | ------------- | ------------- | ------------- |
   | [cart](#cart) | colección | Contiene información del carrito actual | escritura / lectura |
-  | checkout | Documento | Contiene la información de la sesión de checkout | lectura |
-  | products | Contiene todos los productos activos dados de alta en Stripe | lectura |
+  | [checkout](#checkout) | documento | Contiene la información de la sesión de checkout | lectura |
+  | [products](#products) | colección | Contiene todos los productos activos dados de alta en Stripe | lectura |
 
 ## cart
 Esta colección permite obtener todos los productos que han sido añadidos por el usuario al carrito, así como añadir productos o variar sus cantidades.
@@ -49,7 +49,7 @@ Para añadir un producto al carrito, se usa la función `add`, con los siguiente
 
   | Key | Descripción | Carácter |
   | ------------- | ------------- | ------------- |
-  | price_id | El ID del precio, que se puede obtener del documento del producto `@api.stripe.products.prod_K6FkJyCDXDpw55.price.id` | obligatorio |
+  | price_id | El ID del precio, que se puede obtener del documento del producto `@api.stripe.products.productID.price.id` | obligatorio |
   | quantity | La cantidad de unidades a añadir. Si no se especifica, se sumará una unidad al carrito a la cantidad que ya existiese. Si se especifica una cantidad, se sobreescribirá la cantidad existente si dicho producto ya estaba en el carrito. | opcional |
 
 Para eliminar un producto, se usa la función `delete`, pero con la particularidad siguiente:

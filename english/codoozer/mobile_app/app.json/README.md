@@ -12,6 +12,7 @@ This next table shows the parameters that can have:
   | project_name | Mandatory | Alias of the project, assined by the developer |
   | name | Mandatory | Name of the app, the one that will be displayed when installing the app in a device. Accetps [multilanguage](../../multilanguage) |
   | [android](#android-configuration) | Optional | Contains some settings that are needed to generate the version of the app compatible with Android devices. Therefore, this parameter is only needed in case we want to develop an Android app |
+  | [api](#api) | Optional | Contains some settings for using Codoozer's API, which act as a bridge to other 3rd party APIs|
   | [ios](#ios-configuration) | Optional | Contains some settings that are needed to generate the version of the app compatible with iOS devices (Apple). Therefore, this parameter is only needed in case we want to develop an iOS app |
   | [events](#app-events) | Mandatory | Defines how the app should react to some events. It must at least define the event `onstart`, which defines what the app should do right after it is opened. For instance, the function `goto` loading a view |
   | [monetization](#monetization) | Optional | Contains the configuration needed for monetizing the app |
@@ -67,7 +68,12 @@ The next table shows the parameters accepted by the parameter `firebase`.
 
 Information not yet available.
 
+## API
+Codoozer offers a set of APIs that will make things much easier for you to connect with some 3rd party products:
 
+| Key  | Descripción |
+| ------------- | ------------- |
+| [stripe](api/stripe) | One of the most popular online payments processing platforms.|
 
 ## App events
 The `events` parameter contains a JSON object that includes a list of events to which we want to define how the app should react.
