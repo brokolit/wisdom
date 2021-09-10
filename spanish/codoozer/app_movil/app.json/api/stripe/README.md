@@ -7,7 +7,7 @@ Para utilizar esta API, es necesario que conectes tu cuenta de Stripe con la de 
 Una vez integrada, podrás acceder a la información de Stripe de forma muy similar a las bases de datos.
 
 ## Conectar tu cuenta de Stripe
-Si no dispones de una cuenta de Stripe, puedes crear una de forma gratuita en https://stripe.com(https://stripe.com). Stripe no te cobrará una mensualidad por el uso de la plataforma. A cambio, solo te cobrará una pequeña comisión de aproximadamente el 3% de tus ventas.
+Si no dispones de una cuenta de Stripe, puedes crear una de forma gratuita en [https://stripe.com](https://stripe.com). Stripe no te cobrará una mensualidad por el uso de la plataforma. A cambio, solo te cobrará una pequeña comisión de aproximadamente el 3% de tus ventas.
 
 Para conectar tu cuenta, obtén el `account_id` de tu cuenta de Stripe, que encontrarás en los ajustes de tu cuenta, e introdúcelo en el archivo `app.json`, en el parámetro `stripe` que encontrarás dentro del parámetro `api`.
 

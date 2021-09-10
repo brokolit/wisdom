@@ -66,7 +66,7 @@ Codoozer ofrece una serie de APIs que facilitan la integración con estos produc
 
 | Key  | Descripción |
 | ------------- | ------------- |
-| stripe(api/stripe) | Una de las principales pasarelas de pagos online del mundo.|
+| [stripe](api/stripe) | Una de las principales pasarelas de pagos online del mundo.|
 
 ## Configuración iOS
 
