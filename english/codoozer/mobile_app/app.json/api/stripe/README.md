@@ -20,7 +20,7 @@ Inside the reference `@api.stripe` you'll find some collections that will let yo
 
 
   | Key | Type | Description | Mode |
-  | ------------- | ------------- | ------------- |
+  | ------------- | ------------- | ------------- | ------------- |
   | [cart](#cart) | collection | Contains information about the current cart | write / read |
   | [checkout](#checkout) | document | Contains information about the checkout session | read |
   | [products](#products) | collection | Contains all the active products from Stripe | read |
