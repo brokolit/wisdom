@@ -3,8 +3,8 @@
 Codoozer is an online tool for building software without the need of having programming skills. With Codoozer you'll be able to create:
 
 - Android native apps
-- iOS native apps (coming soon)
-- Websites (not yet available)
+- iOS native apps
+- Websites
 - Backend Scripts - PHP (not yet available)
 - Cloud Functions for Google Cloud Platform (not yet available)
 - Other platforms (not yet available)

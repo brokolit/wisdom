@@ -66,6 +66,7 @@ Los componentes que se pueden incluir son:
 | pdfviewer | Visor de archivos pdf |
 | [range](components/range) | Selector con barra de desplazamiento |
 | [scanner](components/scanner) | Imagen |
+| [stripe_checkout](components/stripe_checkout) | Página de checkout (pago) de Stripe |
 | [switch](components/switch) | Conmutador on/off |
 | text | Para mostrar un texto |
 | [video](components/video) | Vídeo |

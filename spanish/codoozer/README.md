@@ -3,8 +3,8 @@
 Codoozer es una herramienta online para crear diferentes tipos de aplicaciones de software sin necesidad de disponer de conocimientos de programación. Con Codoozer, se podrá crear:
 
 - Aplicaciones nativas Android
-- Aplicaciones nativas iOS (próximamente)
-- Páginas web (próximamente)
+- Aplicaciones nativas iOS
+- Páginas web
 - Backend Scripts (PHP)
 - Cloud Functions para Google Cloud Platform (próximamente)
 - Bots AIML (próximamente)
