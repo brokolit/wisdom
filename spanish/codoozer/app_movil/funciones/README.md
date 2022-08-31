@@ -39,6 +39,7 @@ Veamos primero los diferentes tipos de funciones, enumerados en esta tabla:
 | [browser](#function-browser) | Abre el navegador web externo y carga una URL.|
 | [delete](#function-delete) | Elimina contenido de un elemento. Por ejemplo, elimina un registro de una base de datos.|
 | [divide](#function-divide) | Realiza una operación de división.|
+| [file](#function-file) | Permite al usuario seleccionar uno o más archivos. |
 | finish | Elimina la pantalla actual del historial de navegación.|
 | [goto](#function-goto) | Navega a otra vista de la app. |
 | [increase](#function-increase) | Realiza una operación de suma. |
@@ -136,6 +137,55 @@ Ejemplo:
 	"function":"divide",
 	"what":"@property.score",
 	"by":2
+}
+</pre>
+
+## Function FILE
+Permite al usuario seleccionar uno o más archivos.
+
+Estos son sus parámetros:
+
+| Tipo  | Descripción |
+| ------------- | ------------- |
+| into | Referencia donde se guardará la ruta al archivos seleccionado o, en caso de elegir más de un archivo, la referencia debe ser una ruta a una base de datos o firestore.|
+| multiple | Para indicar si se quiere permitir seleccionar varios archivos. Si no se añade este parámetro, solo se permite seleccionar un archivo.|
+| onfailed | Función/es a ejecutar en caso de que el usuario no escoja ningún archivo.|
+| onsuccess | Función/es a ejecutar en caso de que el usuario seleccione archivos correctamente.|
+| type | Tipo MIME para poder restringir la selección a un determinado tipo de archivo. Por ejemplo 'image/*' permitirá seleccionar solo imágenes, 'image/png' solo archivos PNG, etc. (más información en (#https://developer.mozilla.org/es/docs/Web/HTTP/Basics_of_HTTP/MIME_types) |
+
+Ejemplo:
+<pre>
+{
+	"function":"file",
+	"into":"@property.tempFile",
+	"multiple": false,
+	"onsuccess":[
+		{
+			"function":"goto",
+			"view":"profile"
+		}
+	]
+}
+</pre>
+
+Al seleccionar archivos, éstos se copian al almacenamiento interno de la app, guardándose la ruta en la referenca especificada en `into` se almacenar´, que luego podrá ser utilizada como `value` en funciones `set`, por ejemplo.
+
+En caso de selección múltiple, todos los archivos se copian al almacenamiento local, pero la referencia `into` no almacenará la ruta a un archivo, sino un documento json con la siguiente estructura:
+
+<pre>
+{
+	"length":3,  // número de archivos
+	"files":[
+		{
+			"value":"ruta al archivo 1"
+		},
+		{
+			"value":"ruta al archivo 2"
+		},
+		{
+			"value":"ruta al archivo 3"
+		}
+	]
 }
 </pre>
 
