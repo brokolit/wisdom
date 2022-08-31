@@ -189,6 +189,21 @@ En caso de selección múltiple, todos los archivos se copian al almacenamiento 
 }
 </pre>
 
+Ejemplo:
+<pre>
+{
+	"function":"file",
+	"into":"@database.userdata.photos",
+	"multiple": true,
+	"onsuccess":[
+		{
+			"function":"goto",
+			"view":"profile"
+		}
+	]
+}
+</pre>
+
 
 ## Function GOTO
 Navega a otra vista de la app.
