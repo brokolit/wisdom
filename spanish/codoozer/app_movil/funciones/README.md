@@ -138,9 +138,12 @@ El campo operation puede aceptar estos valores:
 Ejemplo:
 <pre>
 {
-	"function":"divide",
-	"what":"@property.score",
-	"by":2
+	"function": "calculate",
+	"collection": "@database.locations",
+	"field": "gps",
+	"into": "distance",
+	"operation": "distanceTo",
+	"parameter": "@app.location",
 }
 </pre>
 
