@@ -37,6 +37,7 @@ Veamos primero los diferentes tipos de funciones, enumerados en esta tabla:
 | [add](#function-add) | Añade contenido a un elemento. Por ejemplo, un registro a una base de datos. |
 | back | Vuelve a la vista anterior en el historial de navegación.|
 | [browser](#function-browser) | Abre el navegador web externo y carga una URL.|
+| [calculate](#function-calculate) | Permite realizar cálculos sobre una base de datos.|
 | [delete](#function-delete) | Elimina contenido de un elemento. Por ejemplo, elimina un registro de una base de datos.|
 | [divide](#function-divide) | Realiza una operación de división.|
 | [file](#function-file) | Permite al usuario seleccionar uno o más archivos. |
@@ -100,6 +101,46 @@ Ejemplo:
 {
 	"function":"browser",
 	"url":"https://codoozer.com"
+}
+</pre>
+
+## Function CALCULATE
+Permite realizar cálculos sobre una base de datos. Por ejemplo, para calcular la suma de todos los registros, el promedio, las distancias a algún punto, etc.
+
+Estos son sus parámetros:
+
+| Tipo  | Descripción |
+| ------------- | ------------- |
+| collection | Referencia a la colección sobre la que se quiere realizar el cálcula.|
+| field | Campo de la colección a usar para realizar el cálculo.|
+| into | Referencia donde se ha de guardar el resultado en caso de ser un único valor.|
+| operation | Operación a realizar.|
+| parameter | Un parámetro opcional necesario para algunos tipos de operaciones.|
+
+El campo operation puede aceptar estos valores:
+
+| Parámetro  | Descripción |
+| ------------- | ------------- |
+| average | Calcula el promedio de todos los valores de la colección del campo definido por el parámetro `field`.|
+| distance | Si el campo definido por `field` contiene coordenadas GPS, devuelve la distancia de la ruta definida por todos los puntos de la colección.|
+| distanceTo | Si el campo definido por `field` contiene coordenadas GPS, calcula la distancia entre cada punto y el definido por el parámetro `parameter`, guardando cada resultado en el mismo registro, en el campo definido por el parámetro `into`.|
+| length | Calcula el número de registros en la colección.|
+| max | Devuelve el ID del registro que contiene el valor máximo entre todos los valores del campo definido por el parámetro `field` en la colección.|
+| max_value | Calcula el valor máximo entre todos los valores del campo definido por el parámetro `field` en la colección.|
+| min | Devuelve el ID del registro que contiene el valor mínimo entre todos los valores del campo definido por el parámetro `field` en la colección.|
+| min_value | Calcula el valor mínimo entre todos los valores del campo definido por el parámetro `field` en la colección.|
+| sum | Calcula la suma de todos los valores de la colección del campo definido por el parámetro `field`.|
+
+
+
+
+
+Ejemplo:
+<pre>
+{
+	"function":"divide",
+	"what":"@property.score",
+	"by":2
 }
 </pre>
 
