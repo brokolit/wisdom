@@ -17,6 +17,9 @@ Para poder hacer uso de la API de Doyo, simplemente hay que activarla en el proy
 También es posible hacer uso de la API de Doyo desde apps y webs que no hayan sido creadas con Doyo, [como se explica más adelante](#como_usar_el_backend_desde_mi_proyecto_creado_fuera_de_doyo)
   
   
+<br>
+<br>
+<br>
 ## Desarrollo de funciones
   
 Disponible próximamente
