@@ -35,9 +35,11 @@ Estos son los eventos disponibles:
 
   | Key  | Descripción |
   | ------------- | ------------- |
+  | onbackpressed | Se produce cuando el usuario pulsa la tecla de volver o se ejecuta alguna función `back`. En caso de añadirse este evento, se bloquea el comportamiento de volver atrás. Será necesario incluir una función `back` al final de la secuencia si se desea volver a la view anterior al terminar la ejecución de las funciones añadidas en este evento. |
+  | onexit | Se produce justo antes abandonar la vista. |
   | onloaded | Se produce una vez la vista ha sido cargado |
   | onpreload | Se produce justo antes de cargarse la vista. En caso de ejecutarse algunos tipos de funciones, como la función `goto`, se podría interrumpir la carga de la vista actual.  |
-  | onexit | Se produce justo antes abandonar la vista. |
+  | onreturned | Se produce cuando se vuelve a esta view tras haber visitado otra view. |
 
 Aquí se puede ver un ejemplo:
 
