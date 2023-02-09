@@ -4,8 +4,8 @@ El término `backend`se refiere a un software que se ejecuta en un servidor para
 
 Existen dos formas de construir un backend con Doyo:
 
-- [Uso del API Doyo](doyo_api)
-- [Desarrollo nocode de funciones](desarrollo_de_funciones)
+- [Uso del API Doyo](#doyo_api)
+- [Desarrollo nocode de funciones](#desarrollo_de_funciones)
 
 ### Doyo API
 
@@ -13,7 +13,7 @@ Doyo proporciona funciones propias de backend, así como integraciones con APIs 
 
 Para poder hacer uso de la API de Doyo, simplemente hay que activarla en el proyecto en el que se quiera usar. Para ello, hay que ir a Configuración > Integraciones. Una vez dentro, simplemente hay que activar las herramientas que se quieren utilizar. En el caso de algunas APIs externas, el usuario deberá tener una cuenta con el proveedor correspondiente y vincularla en Doyo, normalmente a través de un `api key` o similar que dicho proveedor facilitará.
 
-También es posible hacer uso de la API de Doyo desde apps y webs que no hayan sido creadas con Doyo, [como se explica más adelante](como_usar_el_backend_desde_mi_proyecto_creado_fuera_de_doyo)
+También es posible hacer uso de la API de Doyo desde apps y webs que no hayan sido creadas con Doyo, [como se explica más adelante](#como_usar_el_backend_desde_mi_proyecto_creado_fuera_de_doyo)
 
 
 ### Desarrollo de funciones
