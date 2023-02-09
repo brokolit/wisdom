@@ -19,7 +19,7 @@ También es posible hacer uso de la API de Doyo desde apps y webs que no hayan s
   
 <br>
 <br>
-<br>
+<br>  
 ## Desarrollo de funciones
   
 Disponible próximamente
