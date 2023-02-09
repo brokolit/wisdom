@@ -4,5 +4,5 @@ Here you will find useful documentation regarding Doyo products.
 
 Here's the documentation available:
 
-- Codoozer: [english](english/codoozer)
-- Codoozer: [español](spanish/codoozer)
+- Doyo: [english](english/doyo)
+- Doyo: [español](spanish/doyo)
