@@ -9,7 +9,7 @@ Esta es la lista de `providers` disponibles:
 <br>
 | Nombre  | Descripción |
 | ------------- | ------------- |
-| [countryis](providers/countryis) | Country.is es un API open-source de geolocalización para obtener el país a partir de una dirección IP. |
-| [doyo](providers/doyo) | Incluye pequeñas funciones de utilidad que suelen ser más recomendables de ejecutar desde un backend que desde la propia aplicación. |
-| [openai](providers/openai) | Generación de contenido con IA. |
-| [sendgrid](providers/sendgrid) | Envia emails de forma individual o masiva. |
+| [countryis](countryis) | Country.is es un API open-source de geolocalización para obtener el país a partir de una dirección IP. |
+| [doyo](doyo) | Incluye pequeñas funciones de utilidad que suelen ser más recomendables de ejecutar desde un backend que desde la propia aplicación. |
+| [openai](openai) | Generación de contenido con IA. |
+| [sendgrid](sendgrid) | Envia emails de forma individual o masiva. |
