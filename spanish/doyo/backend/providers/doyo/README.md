@@ -22,7 +22,7 @@ No requiere parámetros.
         "provider": "doyo",
         "method": "timestamp"
     }
-    
+
 <br>
 <br>
   
@@ -41,8 +41,38 @@ Devuelve la fecha actual del servidor con el formato especificado.
 ## timestamp.milliseconds
 Devuelve el timestamp del servidor, pero medido en milésimas de segundo
 <br>
-**Parámetros:**
+<br>
+**Parámetros:**  
 No requiere parámetros.
+<br>
+<br>
+**Ejemplo:**  
+<br>
+
+    {
+        "provider": "doyo",
+        "method": "timestamp.milliseconds"
+    }
+    
+<br>
+<br>
+  
+## uuid
+Devuelve un identificador único universal (UUID)
+<br>
+<br>
+**Parámetros:**  
+No requiere parámetros.
+<br>
+<br>
+**Ejemplo:**  
+<br>
+
+    {
+        "provider": "doyo",
+        "method": "uuid"
+    }
+    
 <br>
 <br>
   
