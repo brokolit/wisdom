@@ -10,7 +10,7 @@ Doyo ofrece una serie de funciones básicas que normalmente es mejor que se ejec
 ## timestamp
 Devuelve el timestamp del servidor, que es el número de segundos transcurridos desde el 1 de Enero de 1970.
 <br>
-**Parámetros:  
+**Parámetros:**  
 No requiere parámetros.
 <br>
 <br>
