@@ -17,10 +17,12 @@ No requiere parámetros.
 <br>
 **Ejemplo:**  
 <br>
->{
->    "provider": "doyo",
->    "method": "timestamp"
->}
+
+    {
+        "provider": "doyo",
+        "method": "timestamp"
+    }
+    
 <br>
 <br>
   
