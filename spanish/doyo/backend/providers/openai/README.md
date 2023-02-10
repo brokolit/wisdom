@@ -28,8 +28,8 @@ Genera un texto de forma automática cumpliendo los criterios que se indican en 
 <br>
 
     {
-        "provider": "doyo",
-        "method": "timestamp",
+        "provider": "openai",
+        "method": "createCompletion",
         "parameters": {
             "model": "most-capable_davinci",
             "prompt": "Dime un chiste donde salga una vaca y un perro",
