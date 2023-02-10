@@ -10,11 +10,11 @@ Doyo ofrece una serie de funciones básicas que normalmente es mejor que se ejec
 ## timestamp
 Devuelve el timestamp del servidor, que es el número de segundos transcurridos desde el 1 de Enero de 1970.
 <br>
-**Parámetros:**
+**Parámetros:  
 No requiere parámetros.
 <br>
 <br>
-**Ejemplo:**
+**Ejemplo:**<br>
 <textarea>
 {
     "provider": "doyo",
@@ -27,7 +27,7 @@ No requiere parámetros.
 ## timestamp.format
 Devuelve la fecha actual del servidor con el formato especificado.
 <br>
-**Parámetros:**
+**Parámetros:**<br>
 <br>
 | key  | Descripción |
 | ------------- | ------------- |
