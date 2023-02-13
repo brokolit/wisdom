@@ -24,6 +24,7 @@ Genera un texto de forma automática cumpliendo los criterios que se indican en 
 | temperature | Un número entre 0 y 1 que mide la precisión esperada. Un valor de cero será la máxima precisión, mientras que un valor más alto generará resultados más creativos. |
 <br>
 <br>
+  
 **Ejemplo:**  
 <br>
 

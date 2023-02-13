@@ -15,10 +15,12 @@ Country.is es un API open-source muy sencilla que permite obtener el país a par
 Devuelve el país desde el que se está haciendo la llamada al API.
 <br>
 <br>
+  
 **Parámetros:**  
 No requiere parámetros.
 <br>
 <br>
+  
 **Ejemplo:**  
 <br>
 
@@ -42,6 +44,7 @@ Devuelve el país al que pertenece la IP que se envía como parámetro.
 | ip | Dirección IP de la que se quiere averiguar su país. |
 <br>
 <br>
+  
 **Ejemplo:**  
 <br>
 

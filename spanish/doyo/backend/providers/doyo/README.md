@@ -15,6 +15,7 @@ Devuelve el timestamp del servidor, que es el número de segundos transcurridos 
 No requiere parámetros.
 <br>
 <br>
+  
 **Ejemplo:**  
 <br>
 
@@ -30,6 +31,7 @@ No requiere parámetros.
 Devuelve la fecha actual del servidor con el formato especificado.
 <br>
 <br>
+  
 **Parámetros:**  
 <br>
 | key  | Descripción |
@@ -42,10 +44,12 @@ Devuelve la fecha actual del servidor con el formato especificado.
 Devuelve el timestamp del servidor, pero medido en milésimas de segundo
 <br>
 <br>
+  
 **Parámetros:**  
 No requiere parámetros.
 <br>
 <br>
+  
 **Ejemplo:**  
 <br>
 
@@ -61,10 +65,12 @@ No requiere parámetros.
 Devuelve un identificador único universal (UUID)
 <br>
 <br>
+  
 **Parámetros:**  
 No requiere parámetros.
 <br>
 <br>
+  
 **Ejemplo:**  
 <br>
 

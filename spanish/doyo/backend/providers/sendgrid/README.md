@@ -15,6 +15,7 @@ SendGrid es el servicio de envío de emails en el que confían muchas empresas p
 Envía un email a una dirección de correo. El contenido del email se especifica en los parámetros.
 <br>
 <br>
+  
 **Parámetros:**  
 | Clave  | Tipo | Descripción |
 | ------------- | ------------- | ------------- |
@@ -25,6 +26,7 @@ Envía un email a una dirección de correo. El contenido del email se especifica
 | subject | texto | Asunto del email |
 <br>
 <br>
+  
 **Ejemplo:**  
 <br>
 
@@ -49,6 +51,7 @@ Envía un email a una dirección de correo. El contenido del email se especifica
 Envía un email a una dirección de correo. Dicho email utiliza un template predefinido previamente en SendGrid y que se puede personalizar mediante los parámetros enviados en la llamada.
 <br>
 <br>
+  
 **Parámetros:**  
 | Clave  | Tipo | Descripción |
 | ------------- | ------------- | ------------- |
@@ -58,6 +61,7 @@ Envía un email a una dirección de correo. Dicho email utiliza un template pred
 | to | texto | Dirección de correo del destinatario. |
 <br>
 <br>
+  
 **Ejemplo:**  
 <br>
 
