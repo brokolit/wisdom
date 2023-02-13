@@ -2,6 +2,7 @@
 SendGrid es el servicio de envío de emails en el que confían muchas empresas para enviar correos a escala. Se puede usar para enviar emails individuales a usuarios concretos o para envío masivo de emails.
 <br>
 <br>
+
 **Más información:**
 [https://sendgrid.com](https://sendgrid.com)
 <br>

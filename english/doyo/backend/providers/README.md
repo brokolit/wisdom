@@ -1,15 +1,15 @@
 # Providers
-Llamamos `providers` (proveedores) a todas las herramientas que se pueden encontrar en el API, tanto las creadas por Doyo como por terceros.
+We call `providers` to all those that you can find on API Doyo, both the ones built by Doyo and the ones from 3rd parties.
 <br>
   
-Cada `provider` ofrece uno o varios métodos, que son las distintas acciones que permiten realizar.
+Each `provider` might offer one or several `methods`, which are the actions that can perform.
 <br>
 <br>
 <br>
-  
-Esta es la lista de `providers` disponibles:
+ 
+This is the list of available `providers`:
 <br>
-  
+
 | Nombre  | Descripción |
 | ------------- | ------------- |
 | [countryis](countryis) | Country.is es un API open-source de geolocalización para obtener el país a partir de una dirección IP. |

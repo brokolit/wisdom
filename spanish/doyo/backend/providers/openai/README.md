@@ -2,6 +2,7 @@
 Open AI es la tecnología que hay detrás de ChatGPT. Ofrece un API de inteligencia artificial para generación de texto de forma automática.
 <br>
 <br>
+
 **Más información:**
 [https://beta.openai.com](https://beta.openai.com)
 <br>
@@ -15,7 +16,9 @@ Open AI es la tecnología que hay detrás de ChatGPT. Ofrece un API de inteligen
 Genera un texto de forma automática cumpliendo los criterios que se indican en los parámetros.
 <br>
 <br>
+
 **Parámetros:**  
+
 | Clave  | Descripción |
 | ------------- | ------------- |
 | max_tokens | Indica el número de tokens máximo a consumir por el motor de IA. A mayor número de tokens, la respuesta será más larga. Hay que tener en cuenta que el API de OpenAI factura por tokens consumidos. |

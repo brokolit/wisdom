@@ -2,6 +2,7 @@
 Country.is es un API open-source muy sencilla que permite obtener el país a partir de una dirección IP. El país se devuelve en formato ISO.
 <br>
 <br>
+
 **Más información:**
 [https://country.is](https://country.is)
 <br>
@@ -38,6 +39,7 @@ No requiere parámetros.
 Devuelve el país al que pertenece la IP que se envía como parámetro.
 <br>
 <br>
+
 **Parámetros:**  
 | Clave  | Descripción |
 | ------------- | ------------- |
