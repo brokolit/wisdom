@@ -11,7 +11,132 @@ SendGrid is an email delivery service trusted by a lot of companies worldwide. Y
 # Methods
 <br>
 <br>
+
+## contacts.add
+Adds/updates a contact on Sendgrid. 
+<br>
+<br>
   
+**Parameters:**  
+| Key | Type | Description |
+| ------------- | ------------- | ------------- |
+| email | text | Email of the contact. This is the only parameter you need to create a contact. All other parameters are optionsl. |
+| address_line_1 | text | Address (optional) |
+| address_line_2 | text | Address, second line (optional) |
+| city | text | City (optional) |
+| country | text | Country (optional) |
+| first_name | text | First name (optional) |
+| last_name | text | Last name (optional) |
+| postal_code | text | Postal code (optional) |
+| state_province_region | text | State, province or region (optional) |
+| custom_fields | object | An object containing custom fields. Those custom fields must be previously configured on Sendgrid. (optional) |
+<br>
+<br>
+  
+**Example:**  
+<br>
+
+    {
+        "provider": "sendgrid",
+        "method": "contact.add",
+        "parameters":{
+            "email": "sender@example.com",
+            "first_name": "Michael",
+            "last_name": "Jordan",
+            "custom_fields": {
+                "team": "Chicago Bulls"
+            }
+        }
+    }
+
+<br>
+<br>
+  
+
+## contacts.delete
+Delete a contact from Sendgrid. You can use the email or the id to identify the contact.
+<br>
+<br>
+  
+**Parameters:**  
+| Key | Type | Description |
+| ------------- | ------------- | ------------- |
+| email | text | Email of the contact you want to delete (optional) |
+| id | text | Sendgrid's ID of the contact you want to delete (optional) |
+<br>
+<br>
+  
+**Example:**  
+<br>
+
+    {
+        "provider": "sendgrid",
+        "method": "contact.delete",
+        "parameters":{
+            "email": "sender@example.com"
+        }
+    }
+
+<br>
+<br>
+  
+
+## contacts.get
+Get all the information from a contact
+<br>
+<br>
+  
+**Parameters:**  
+| Key | Type | Description |
+| ------------- | ------------- | ------------- |
+| email | text | Email of the contact you want to get (optional) |
+| id | text | Sendgrid's ID of the contact you want to get (optional) |
+<br>
+<br>
+  
+**Example:**  
+<br>
+
+    {
+        "provider": "sendgrid",
+        "method": "contact.get",
+        "parameters":{
+            "email": "sender@example.com"
+        }
+    }
+
+<br>
+<br>
+  
+
+## contacts.id
+Get the ID of a contact from its email
+<br>
+<br>
+  
+**Parameters:**  
+| Key | Type | Description |
+| ------------- | ------------- | ------------- |
+| email | text | Email of the contact you want to get its ID |
+<br>
+<br>
+  
+**Example:**  
+<br>
+
+    {
+        "provider": "sendgrid",
+        "method": "contact.id",
+        "parameters":{
+            "email": "sender@example.com"
+        }
+    }
+
+<br>
+<br>
+  
+
+
 ## sendEmail
 Sends a single email to a given email address. The body of the email can be plain text and/or html.
 <br>
