@@ -12,7 +12,8 @@ This is the list of available `providers`:
 
 | Nombre  | Descripción |
 | ------------- | ------------- |
-| [countryis](countryis) | Country.is es un API open-source de geolocalización para obtener el país a partir de una dirección IP. |
-| [doyo](doyo) | Incluye pequeñas funciones de utilidad que suelen ser más recomendables de ejecutar desde un backend que desde la propia aplicación. |
-| [openai](openai) | Generación de contenido con IA. |
-| [sendgrid](sendgrid) | Envia emails de forma individual o masiva. |
+| [countryis](countryis) | Country.is is an open-source geolocation API for obtaining the country from an IP address.|
+| [doyo](doyo) | Includes small utility functions that are usually more recommended to run from a backend than from the application itself.|
+| [firebase](firebase) | Popular backend that does not require programming knowledge.|
+| [openai](openai) | AI content generation.|
+| [sendgrid](sendgrid) | Sends emails individually or in bulk.|
