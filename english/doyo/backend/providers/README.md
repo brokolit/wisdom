@@ -15,5 +15,7 @@ This is the list of available `providers`:
 | [countryis](countryis) | Country.is is an open-source geolocation API for obtaining the country from an IP address.|
 | [doyo](doyo) | Includes small utility functions that are usually more recommended to run from a backend than from the application itself.|
 | [firebase](firebase) | Popular backend that does not require programming knowledge.|
+| [mysql](mysql) | Read and write from a remote MySQL database.|
 | [openai](openai) | AI content generation.|
+| [pdfmonkey](pdfmonkey) | Generate PDF files based on templates.|
 | [sendgrid](sendgrid) | Sends emails individually or in bulk.|
