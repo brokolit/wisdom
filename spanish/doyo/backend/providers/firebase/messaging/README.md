@@ -22,7 +22,8 @@ Para apps creadas con Doyo, el token de un usuario se puede obtener mediante el 
 **Parámetros:**  
 | Clave | Tipo | Descripción |
 | ------------- | ------------- | ------------- |
-| to | text / array | Destinatario o destinatarios. El valor puede ser una cadena de texto que contenga el token fcm del destinatario o un array de tokens. |
+| to | text | Token FCM del destinatario al que queremos enviar el mensaje. |
+| topic | text | Nombre de un topic, se enviará el mensaje a todos los usuarios suscritos a dicho topic. |
 | title | text | Título del mensaje (optional) |
 | body | text | Contenido del mensaje (optional) |
 | data | object | Datos a enviar a través del mensaje push (optional) |

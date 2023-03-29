@@ -22,7 +22,8 @@ For apps created with Doyo, a user's token can be obtained by using the referenc
 **Parameters:**  
 | Key | Type | Description |
 | ------------- | ------------- | ------------- |
-| to | text / array | Recipient or recipients. The value can be a text string containing the FCM token of the recipient or an array of tokens. |
+| to | text | The FCM token of the recipient. |
+| topic | text | Send a message to all the users subscribed to a topic. |
 | title | text | Title of the message (optional) |
 | body | text | Content of the message (optional)|
 | data | object | Data to send through the push message (optional) |
