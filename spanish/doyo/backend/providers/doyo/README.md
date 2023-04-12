@@ -6,6 +6,20 @@ Doyo ofrece una serie de funciones básicas que normalmente es mejor que se ejec
 # Métodos
 <br>
 <br>
+
+## random.pin
+Genera un pin numérico aleatorio con el número de dígitos dado.
+<br>
+<br>
+    
+**Parámetros:**  
+<br>
+| key  | Descripción |
+| ------------- | ------------- |
+| digits | Número de dígitos que debe tener el PIN |
+<br>
+<br>
+  
   
 ## timestamp
 Devuelve el timestamp del servidor, que es el número de segundos transcurridos desde el 1 de Enero de 1970.

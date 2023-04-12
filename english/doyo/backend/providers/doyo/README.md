@@ -7,6 +7,20 @@ Doyo offers a set of basic functions that should be normally be perform on the b
 <br>
 <br>
   
+## random.pin
+Generates a random numeric PIN with a given number of digits.
+<br>
+<br>
+    
+**Parameters:**  
+<br>
+| key  | Descripción |
+| ------------- | ------------- |
+| digits | Number of digits that the PIN code must have. |
+<br>
+<br>
+  
+  
 ## timestamp
 Returns the time on the server, as the number of seconds since January 1st, 1970.
 <br>
